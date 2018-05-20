@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-aerogear.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-android-sdk.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-build.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-cordova.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-custom.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-ios.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-keycloak.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-metrics.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-push.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://www.aerogear.org/sitemap-xamarin-sdk.xml</loc>
+</sitemap>
+</sitemapindex>
