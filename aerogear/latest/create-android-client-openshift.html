@@ -128,34 +128,43 @@ $(addBlockSwitches);
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="apps.html">Mobile Apps</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">clients.adoc</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">xref:binding.adoc[Binding an App to a Service</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">building.adoc</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-toggle"></button>
     <a class="nav-link" href="services.html">Mobile Services</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="provisioning-services.html">Provisioning</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="integrating-services.html">Integrating</a>
+    <a class="nav-link" href="integrating-services.html">Binding Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="apps.html">Mobile Apps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registering-a-mobile-app.html">Registering an App</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Configuring</span>
+    <a class="nav-link" href="binding-mobile-app-record-to-mobile-services.html">Binding an App to a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Multiple Projects</span>
+    <a class="nav-link" href="configuring-app-dev-env.html">Configuring mobile app development environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-metrics.html">Using the Metrics Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-push.html">Using the Unified Push Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-auth.html">Using the Auth Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-custom.html">Using the Custom Runtime Connector Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-build.html">Using the CI/CD Service</a>
   </li>
 </ul>
   </li>
@@ -166,22 +175,25 @@ $(addBlockSwitches);
     <a class="nav-link" href="ref_api.html">API Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-cli.inc.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text">---------------------</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-authentication-to-your-app.adoc</a>
+    <a class="nav-link" href="monitoring-your-app-usage.html">Monitoring your App Usage</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">protecting-your-backend-app-with-keycloak.adoc</a>
+    <a class="nav-link" href="adding-security-checks-to-your-app.html">Adding Security Checks to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">monitoring-your-app-usage.adoc</a>
+    <a class="nav-link" href="adding-authentication-to-your-app.html">Adding Authentication to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-push-notifications.adoc</a>
+    <a class="nav-link" href="protecting-your-backend-app-with-keycloak.html">Protecting your Backend App with Keycloak</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">using-cicd-for-mobile-app-development.adoc</a>
+    <a class="nav-link" href="adding-push-notifications.html">Adding Push Notifications</a>
   </li>
 </ul>
   </li>
@@ -289,11 +301,11 @@ $(addBlockSwitches);
 </div>
 <article class="doc">
 <div class="sect1">
-<h2 id="create-an-android-mobile-client-in-openshift"><a class="anchor" href="#create-an-android-mobile-client-in-openshift"></a>Create an Android Mobile Client in OpenShift</h2>
+<h2 id="create-an-android-mobile-app-record-in-openshift"><a class="anchor" href="#create-an-android-mobile-app-record-in-openshift"></a>Create an Android mobile app record in OpenShift</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This guide demonstrates how to create an Android
-<a href="./mobile-clients-in-openshift.adoc">Mobile Client in OpenShift</a>.</p>
+<a href="./mobile-clients-in-openshift.adoc">mobile app record in OpenShift</a>.</p>
 </div>
 </div>
 </div>
@@ -324,14 +336,14 @@ ID, for example, <code>com.aerogear.myapp</code>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/images/create-android-app.png" alt="Android Mobile Client Wizard"></span></p>
+<p><span class="image"><img src="_images/images/create-android-app.png" alt="Android mobile app record Wizard"></span></p>
 </div>
 <div class="paragraph">
-<p>The Android Mobile Client is now visible in the project overview page.
-Click on the Mobile Client to expand and reveal the configuration.</p>
+<p>The Android mobile app record is now visible in the project overview page.
+Click on the mobile app record to expand and reveal the configuration.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/images/mobile-client-config-blank.png" alt="Android Mobile Client Configuration"></span></p>
+<p><span class="image"><img src="_images/images/mobile-client-config-blank.png" alt="Android mobile app record Configuration"></span></p>
 </div>
 </div>
 </div>
@@ -339,7 +351,7 @@ Click on the Mobile Client to expand and reveal the configuration.</p>
 <h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Now that the Android Mobile Client is available, it is now possible to
+<p>Now that the Android mobile app record is available, it is now possible to
 start integrating your Android App with other services. Check out some
 of these guides:</p>
 </div>

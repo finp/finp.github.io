@@ -53,7 +53,7 @@ $(addBlockSwitches);
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Provisioning a Mobile Client :: AeroGear Mobile Services</title>
+    <title>Registering a Mobile App :: AeroGear Mobile Services</title>
     <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/registering-a-mobile-app.html">
     <meta name="generator" content="Antora 1.0.1">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -128,34 +128,43 @@ $(addBlockSwitches);
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="apps.html">Mobile Apps</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">clients.adoc</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">xref:binding.adoc[Binding an App to a Service</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">building.adoc</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-toggle"></button>
     <a class="nav-link" href="services.html">Mobile Services</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="provisioning-services.html">Provisioning</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="integrating-services.html">Integrating</a>
+    <a class="nav-link" href="integrating-services.html">Binding Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="apps.html">Mobile Apps</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="registering-a-mobile-app.html">Registering an App</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Configuring</span>
+    <a class="nav-link" href="binding-mobile-app-record-to-mobile-services.html">Binding an App to a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Multiple Projects</span>
+    <a class="nav-link" href="configuring-app-dev-env.html">Configuring mobile app development environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-metrics.html">Using the Metrics Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-push.html">Using the Unified Push Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-auth.html">Using the Auth Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-custom.html">Using the Custom Runtime Connector Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-build.html">Using the CI/CD Service</a>
   </li>
 </ul>
   </li>
@@ -166,22 +175,25 @@ $(addBlockSwitches);
     <a class="nav-link" href="ref_api.html">API Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-cli.inc.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text">---------------------</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-authentication-to-your-app.adoc</a>
+    <a class="nav-link" href="monitoring-your-app-usage.html">Monitoring your App Usage</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">protecting-your-backend-app-with-keycloak.adoc</a>
+    <a class="nav-link" href="adding-security-checks-to-your-app.html">Adding Security Checks to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">monitoring-your-app-usage.adoc</a>
+    <a class="nav-link" href="adding-authentication-to-your-app.html">Adding Authentication to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-push-notifications.adoc</a>
+    <a class="nav-link" href="protecting-your-backend-app-with-keycloak.html">Protecting your Backend App with Keycloak</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">using-cicd-for-mobile-app-development.adoc</a>
+    <a class="nav-link" href="adding-push-notifications.html">Adding Push Notifications</a>
   </li>
 </ul>
   </li>
@@ -286,13 +298,14 @@ $(addBlockSwitches);
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
   <ul>
     <li class="crumb"><a href="index.html">AeroGear</a></li>
-    <li class="crumb"><a href="registering-a-mobile-app.html">Provisioning a Mobile Client</a></li>
+    <li class="crumb"><a href="apps.html">Mobile Apps</a></li>
+    <li class="crumb"><a href="registering-a-mobile-app.html">Registering an App</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/registering-a-mobile-app.adoc">Edit this Page</a></div>
 </div>
 <article class="doc">
-<h1>Provisioning a Mobile Client</h1>
+<h1>Registering a Mobile App</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
@@ -301,12 +314,12 @@ $(addBlockSwitches);
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> You have installed Minishift with the mobilecore addon as described in <a href="minishift_install.inc.html" class="page">Setting Up</a>.</p>
+<p><i class="fa fa-check-square-o"></i> You have installed Minishift with the mobilecore addon as described in <a href="minishift_install.inc.html" class="page">Getting Started</a>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To provision a mobile client:</p>
+<p>You register a mobile app by creating a mobile app record in OpenShift:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -320,12 +333,12 @@ $(addBlockSwitches);
 </div>
 </li>
 <li>
-<p>Choose the mobile client (Android, iOS, Cordova or Xamarin) and follow the wizard for provisioning that client app.</p>
+<p>Choose the mobile platform (Android, iOS, Cordova or Xamarin) and follow the wizard.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>After the mobile client is provisioned, you can navigate to it from Project Overview. This screen dislays a list of mobile services that you can associate with the mobile client and offers to provision any mobile service that is in the service catalog but is not currently provisioned.</p>
+<p>After the mobile app record is provisioned, you can navigate to it from Project Overview. This screen dislays a list of mobile services that you can associate with the mobile app record and offers to provision any mobile service that is in the service catalog but is not currently provisioned.</p>
 </div>
 </div>
 </div>
@@ -338,7 +351,7 @@ $(addBlockSwitches);
 <p><a href="provisioning-services.html" class="page">provisioning a mobile service</a></p>
 </li>
 <li>
-<p><a href="#">connecting-mobile-clients-to-mobile-services.adoc</a></p>
+<p><a href="binding-mobile-app-record-to-mobile-services.html" class="page">binding a mobile app record with a mobile service</a></p>
 </li>
 </ul>
 </div>

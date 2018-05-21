@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.aerogear.org/build/latest/index.html</loc>
-<lastmod>2018-05-20T21:14:39.742Z</lastmod>
+<lastmod>2018-05-21T10:04:10.900Z</lastmod>
 </url>
 <url>
 <loc>https://www.aerogear.org/build/latest/proc_configuring-an-ios-app-for-ci-cd.html</loc>
-<lastmod>2018-05-20T21:14:39.742Z</lastmod>
+<lastmod>2018-05-21T10:04:10.900Z</lastmod>
+</url>
+<url>
+<loc>https://www.aerogear.org/build/latest/provisioning.html</loc>
+<lastmod>2018-05-21T10:04:10.900Z</lastmod>
 </url>
 </urlset>

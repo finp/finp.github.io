@@ -128,34 +128,43 @@ $(addBlockSwitches);
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="apps.html">Mobile Apps</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">clients.adoc</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">xref:binding.adoc[Binding an App to a Service</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#">building.adoc</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-toggle"></button>
     <a class="nav-link" href="services.html">Mobile Services</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="provisioning-services.html">Provisioning</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="integrating-services.html">Integrating</a>
+    <a class="nav-link" href="integrating-services.html">Binding Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="apps.html">Mobile Apps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="registering-a-mobile-app.html">Registering an App</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Configuring</span>
+    <a class="nav-link" href="binding-mobile-app-record-to-mobile-services.html">Binding an App to a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <span class="nav-text">Multiple Projects</span>
+    <a class="nav-link" href="configuring-app-dev-env.html">Configuring mobile app development environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-metrics.html">Using the Metrics Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-push.html">Using the Unified Push Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-auth.html">Using the Auth Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-custom.html">Using the Custom Runtime Connector Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-build.html">Using the CI/CD Service</a>
   </li>
 </ul>
   </li>
@@ -166,22 +175,25 @@ $(addBlockSwitches);
     <a class="nav-link" href="ref_api.html">API Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-cli.inc.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text">---------------------</span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-authentication-to-your-app.adoc</a>
+    <a class="nav-link" href="monitoring-your-app-usage.html">Monitoring your App Usage</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">protecting-your-backend-app-with-keycloak.adoc</a>
+    <a class="nav-link" href="adding-security-checks-to-your-app.html">Adding Security Checks to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">monitoring-your-app-usage.adoc</a>
+    <a class="nav-link" href="adding-authentication-to-your-app.html">Adding Authentication to your App</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">adding-push-notifications.adoc</a>
+    <a class="nav-link" href="protecting-your-backend-app-with-keycloak.html">Protecting your Backend App with Keycloak</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#">using-cicd-for-mobile-app-development.adoc</a>
+    <a class="nav-link" href="adding-push-notifications.html">Adding Push Notifications</a>
   </li>
 </ul>
   </li>
@@ -316,7 +328,7 @@ $(addBlockSwitches);
 <div class="ulist">
 <ul>
 <li>
-<p><a href="./create-android-client-openshift.adoc">Create an Android Mobile Client in OpenShift</a></p>
+<p><a href="./create-android-client-openshift.adoc">Create an Android mobile app record in OpenShift</a></p>
 </li>
 </ul>
 </div>
@@ -329,7 +341,7 @@ $(addBlockSwitches);
 <p>For demonstration, this guide uses the example Python application which can be found in the OpenShift Service Catalog. The same steps can be followed any HTTP web service running in OpenShift that has a publicly accessible route.</p>
 </div>
 <div class="paragraph">
-<p>Pictured below is the example Python application, and the Android mobile client provisioned in OpenShift.</p>
+<p>Pictured below is the example Python application, and the Android mobile app record provisioned in OpenShift.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/images/custom-service-py.png" alt="Custom Service and Android Client in OpenShift"></span></p>
@@ -337,7 +349,7 @@ $(addBlockSwitches);
 <div class="sect2">
 <h3 id="provision-the-custom-runtime-connector"><a class="anchor" href="#provision-the-custom-runtime-connector"></a>Provision the Custom Runtime Connector</h3>
 <div class="paragraph">
-<p>We can connect our mobile client to our backend service by provisioning a <strong>Custom Runtime Connector</strong> from the OpenShift Service Catalog.</p>
+<p>We can connect our mobile app record to our backend service by provisioning a <strong>Custom Runtime Connector</strong> from the OpenShift Service Catalog.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -366,11 +378,11 @@ $(addBlockSwitches);
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-the-custom-runtime-connector-service-to-the-mobile-client"><a class="anchor" href="#add-the-custom-runtime-connector-service-to-the-mobile-client"></a>Add the Custom Runtime Connector Service to the Mobile Client</h3>
+<h3 id="add-the-custom-runtime-connector-service-to-the-mobile-app-record"><a class="anchor" href="#add-the-custom-runtime-connector-service-to-the-mobile-app-record"></a>Add the Custom Runtime Connector Service to the mobile app record</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Click the Mobile Client to reveal the JSON configuration. The 'services' list is empty.</p>
+<p>Click the mobile app record to reveal the JSON configuration. The 'services' list is empty.</p>
 </li>
 <li>
 <p>Click the 'Add Service' button and select 'custom-runtime-connector' from the dropdown menu.</p>
@@ -378,23 +390,23 @@ $(addBlockSwitches);
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/images/mobile-client-select-crc.png" alt="Mobile Client Config Blank"></span></p>
+<p><span class="image"><img src="_images/images/mobile-client-select-crc.png" alt="mobile app record Config Blank"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The 'services' list in the Mobile Client Configuration now includes a configuration object that contains details related to your backend service such as the name, uri and custom configuration.</p>
+<p>The 'services' list in the mobile app record Configuration now includes a configuration object that contains details related to your backend service such as the name, uri and custom configuration.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/images/mobile-client-custom-runtime.png" alt="Mobile Client Config with Custom Service"></span></p>
+<p><span class="image"><img src="_images/images/mobile-client-custom-runtime.png" alt="mobile app record Config with Custom Service"></span></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="integrate-your-android-application-with-the-custom-service"><a class="anchor" href="#integrate-your-android-application-with-the-custom-service"></a>Integrate your Android Application with the Custom Service</h3>
 <div class="paragraph">
-<p>Take a copy of the JSON configuration from the mobile client and save it in <code>app/src/main/assets/mobile-services.json</code> in your Android application&#8217;s source code.</p>
+<p>Take a copy of the JSON configuration from the mobile app record and save it in <code>app/src/main/assets/mobile-services.json</code> in your Android application&#8217;s source code.</p>
 </div>
 <div class="paragraph">
 <p>Now the Aerogear SDK can be used to get the configuration for your custom service and it is possible to make requests. Please look at the example code below:</p>
