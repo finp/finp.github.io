@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script>
+function addBlockSwitches() {
+	$('.primary').each(function() {
+		primary = $(this);
+		createSwitchItem(primary, createBlockSwitch(primary)).item.addClass("selected");
+		primary.children('.title').remove();
+	});
+	$('.secondary').each(function(idx, node) {
+		secondary = $(node);
+		primary = findPrimary(secondary);
+		switchItem = createSwitchItem(secondary, primary.children('.switch'));
+		switchItem.content.addClass('hidden');
+		findPrimary(secondary).append(switchItem.content);
+		secondary.remove();
+	});
+}
+
+function createBlockSwitch(primary) {
+	blockSwitch = $('<div class="switch"></div>');
+	primary.prepend(blockSwitch);
+	return blockSwitch;
+}
+
+function findPrimary(secondary) {
+	candidate = secondary.prev();
+	while (!candidate.is('.primary')) {
+		candidate = candidate.prev();
+	}
+	return candidate;
+}
+
+function createSwitchItem(block, blockSwitch) {
+	blockName = block.children('.title').text();
+	content = block.children('.content').first().append(block.next('.colist'));
+	item = $('<div class="switch--item">' + blockName + '</div>');
+	item.on('click', '', content, function(e) {
+		$(this).addClass('selected');
+		$(this).siblings().removeClass('selected');
+		e.data.siblings('.content').addClass('hidden');
+		e.data.removeClass('hidden');
+	});
+	blockSwitch.append(item);
+	return {'item': item, 'content': content};
+}
+
+$(addBlockSwitches);    
+</script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding a Mobile Client with the Push Notifications service :: AeroGear Mobile Services</title>
+    <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/push/binding.html">
+    <meta name="generator" content="Antora 1.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.aerogear.org">AeroGear Mobile Services</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="aerogear" data-version="latest">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#prerequisites">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#procedure">Setting up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#registering">Registering a Mobile Client</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#provisioning">Provisioning a Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#binding">Binding Client/Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#localdev">Your Development Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#running">Running the mobile app</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../con_services.html">Mobile Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../identity-management.html">Identity Management</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#setup">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#user-auth">User Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#access">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#sso">Single Sign On</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#monitoring">Monitoring Identity Management</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-connector.html">Runtime Connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../mobile-metrics.html">Mobile Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../mobile-cicd.html">Mobile CI/CD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../device-security.html">Device Security</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../ref_api.html">API Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#android">Android</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#ios">iOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#cordova">Cordova</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#xamarin">Xamarin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../showcase-apps/index.html">Showcase Apps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/service-setup.html">Service Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/identity-management.html">Identity Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/device-security.html">Device Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/metrics.html">Mobile Metrics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mobile-cli.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="binding.html">Binding a Mobile Client with the Push Notifications service</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/push/binding.adoc"></a></div>
+</div>
+<article class="doc">
+<h1>Binding a Mobile Client with the Push Notifications service</h1>
+<div class="sect1">
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="sidebarblock primary">
+<div class="title">Android</div><div class="content">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> A Google account</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Access to the Firebase console. See <a href="google-setup.html">Firebase Setup</a> to get started.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">iOS</div><div class="content">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> An Apple Developer account</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> An APNs client TLS certificate. Have a look at <a href="apple-setup.html">APNs Setup</a> for further instructions.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To use mobile services, you must represent your mobile app in OpenShift using a Mobile Client and that Mobile Client must be associated with the mobile service.
+This association is called a binding and once it&#8217;s done, your mobile app can use that service immediately.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The association between a Mobile Client and  Service uses the <a href="https://blog.openshift.com/asynchronous-bind-with-the-automation-broker/">Service Broker bind</a> feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To associate a Mobile Client with a mobile service:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <strong>Overview</strong> of your OpenShift project.</p>
+</li>
+<li>
+<p>Click on the Mobile Client and navigate to Mobile Client view.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Your mobile app will be represented by two items in OpenShift, an item in the <strong>Mobile Clients</strong> list and an item in the <strong>Provisioned Services</strong> list. Make sure to click on the item in the <strong>Mobile Clients</strong> list.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Navigate to <strong>Mobile Services</strong> tab.</p>
+</li>
+<li>
+<p>Expand the  Service by clicking the <strong>&gt;</strong> icon.</p>
+</li>
+<li>
+<p>Click <strong>Create Binding</strong> and follow the <strong>Create Binding</strong> wizard to associate the Mobile Client with the  Service.</p>
+</li>
+<li>
+<p>Fill out the binding parameters required by the  Service, if any.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When you bind a mobile client to the Push Notifications service, a variant is created to store the credentials required to communicate with a push network.
+Those credentials need to be provided in the binding dialog.</p>
+</div>
+<div class="paragraph">
+<p>First pick your <strong>Mobile Client Type</strong>. Depending on the selection you then have to fill out the fields for either Android or iOS.</p>
+</div>
+<div class="sidebarblock primary">
+<div class="title">Android</div><div class="content">
+<div class="paragraph">
+<p>You need to provide a <strong>Server Key</strong> and a <strong>Sender ID</strong>. Both can be found in the Firebase console under <strong>Project Settings &gt; Cloud Messaging</strong>. Make sure that you have selected <code>Android</code> in the <code>Mobile Client Type</code> dropdown.</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">iOS</div><div class="content">
+<div class="paragraph">
+<p>You need an APNs client TLS certificate. Have a look at <a href="apple-setup.html">APNs Setup</a> for instructions on how to obtain one. Make sure that you have selected <code>iOS</code> in the <code>Mobile Client Type</code> dropdown.
+The certificate needs to be encoded in base64 before copying it into the field labelled <code>iOS .p12 file</code>. If you&#8217;re on Mac OS run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;path/to/your/.p12&gt; | base64</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re on Linux chances are that you&#8217;re using a version of the base64 tool that does line wrapping. You need to disable this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;path/to/your/.p12&gt; | base64 --wrap=0</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>After clicking Bind your variant will be created in UPS and you should see a new binding for your mobile client.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="configuring-dev-env-push.html" class="page">Configuring your Development Environment for the  Service</a></p>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This is a preview of the https://docs.aerogear.org website.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

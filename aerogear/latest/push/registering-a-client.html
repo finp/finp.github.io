@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script>
+function addBlockSwitches() {
+	$('.primary').each(function() {
+		primary = $(this);
+		createSwitchItem(primary, createBlockSwitch(primary)).item.addClass("selected");
+		primary.children('.title').remove();
+	});
+	$('.secondary').each(function(idx, node) {
+		secondary = $(node);
+		primary = findPrimary(secondary);
+		switchItem = createSwitchItem(secondary, primary.children('.switch'));
+		switchItem.content.addClass('hidden');
+		findPrimary(secondary).append(switchItem.content);
+		secondary.remove();
+	});
+}
+
+function createBlockSwitch(primary) {
+	blockSwitch = $('<div class="switch"></div>');
+	primary.prepend(blockSwitch);
+	return blockSwitch;
+}
+
+function findPrimary(secondary) {
+	candidate = secondary.prev();
+	while (!candidate.is('.primary')) {
+		candidate = candidate.prev();
+	}
+	return candidate;
+}
+
+function createSwitchItem(block, blockSwitch) {
+	blockName = block.children('.title').text();
+	content = block.children('.content').first().append(block.next('.colist'));
+	item = $('<div class="switch--item">' + blockName + '</div>');
+	item.on('click', '', content, function(e) {
+		$(this).addClass('selected');
+		$(this).siblings().removeClass('selected');
+		e.data.siblings('.content').addClass('hidden');
+		e.data.removeClass('hidden');
+	});
+	blockSwitch.append(item);
+	return {'item': item, 'content': content};
+}
+
+$(addBlockSwitches);    
+</script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registering a Push Notifications client :: AeroGear Mobile Services</title>
+    <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/push/registering-a-client.html">
+    <meta name="generator" content="Antora 1.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.aerogear.org">AeroGear Mobile Services</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="aerogear" data-version="latest">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#prerequisites">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#procedure">Setting up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#registering">Registering a Mobile Client</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#provisioning">Provisioning a Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#binding">Binding Client/Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#localdev">Your Development Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html#running">Running the mobile app</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../con_services.html">Mobile Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../identity-management.html">Identity Management</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#setup">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#user-auth">User Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#access">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#sso">Single Sign On</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../identity-management.html#monitoring">Monitoring Identity Management</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../runtime-connector.html">Runtime Connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../mobile-metrics.html">Mobile Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../mobile-cicd.html">Mobile CI/CD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../device-security.html">Device Security</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../ref_api.html">API Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#android">Android</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#ios">iOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#cordova">Cordova</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ref_api.html#xamarin">Xamarin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../showcase-apps/index.html">Showcase Apps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/service-setup.html">Service Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/identity-management.html">Identity Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/device-security.html">Device Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../showcase-apps/metrics.html">Mobile Metrics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mobile-cli.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="registering-a-client.html">Registering a Push Notifications client</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/push/registering-a-client.adoc"></a></div>
+</div>
+<article class="doc">
+<h1>Registering a Push Notifications client</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document describes the functionality of a client SDK that works
+with the AeroGear UnifiedPush Server.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="motivation-purpose"><a class="anchor" href="#motivation-purpose"></a>Motivation / Purpose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://github.com/aerogear/aerogear-unifiedpush-server">AeroGear
+UnifiedPush Server</a> is accessible via HTTP. Instead of having to
+manually register a device (<code>Installation</code>) with the HTTP interface, a
+client library should be offered.</p>
+</div>
+<div class="paragraph">
+<p><strong>Goal:</strong> A client library to register a mobile application
+(<code>Installation</code>) with the UnifiedPush Server.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="background-push-network-token"><a class="anchor" href="#background-push-network-token"></a>Background: Push Network Token</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To receive native push notifications from a Push Network (e.g. APNs, GCM
+or SimplePush), the mobile device is identified with a unique
+<code>device-token</code>, assigned by the actual Push Network. This <code>device-token</code>
+is passed, by the underlying Operating-System, to the mobile
+application. Details are different on each platform and <strong>not</strong> part of
+this document.</p>
+</div>
+<div class="paragraph">
+<p>The <code>device-token</code> needs to be registered with the <em>AeroGear UnifiedPush
+Server</em>, to indicate there is a new <code>Installation</code> for a <code>Variant</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="functionality"><a class="anchor" href="#functionality"></a>Functionality</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>WARNING:</strong> <em>The focus of this specification is to describe the generic
+minimum and not any platform-specific requirements</em></p>
+</div>
+<div class="paragraph">
+<p>The client SDK offers the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Registration and Updating of a <code>Installation</code></p>
+</li>
+<li>
+<p>Unregistration of a <code>Installation</code> (optional, due to platform specific
+restrictions)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="registration-and-updating-of-a-installation"><a class="anchor" href="#registration-and-updating-of-a-installation"></a>Registration and Updating of a Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Everytime when a mobile application launches it receives the above
+mentioned <code>device-token</code>, via a <em>platform-specific</em> method (or
+callback). Since the Push Network (e.g. APNs or GCM) <em>may</em> assign a
+<strong>new</strong> token to a device, it is <em>recommended</em> to <em>always</em> (re)register
+the <code>device-token</code> with the <em>AeroGear UnifiedPush Server</em>.</p>
+</div>
+<div class="paragraph">
+<p>The required metadata for an <code>Installation</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>deviceToken:</strong> <em>Identifies the device/user-agent within its Push
+Network.</em></p>
+</li>
+<li>
+<p><strong>variantID:</strong> <em>The ID of the variant, where the client belongs to</em></p>
+</li>
+<li>
+<p><strong>variantSecret:</strong> <em>Password of the actual variant</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <em>AeroGear UnifiedPush Server</em> is able to store some user-specific
+metadata as well:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>deviceType:</strong> <em>The device type of the device or the user agent.</em></p>
+</li>
+<li>
+<p><strong>operatingSystem:</strong> <em>The name of the underlying Operating System.</em></p>
+</li>
+<li>
+<p><strong>osVersion:</strong> <em>The version of the used Operating System.</em></p>
+</li>
+<li>
+<p><strong>alias:</strong> <em>Application specific alias to identify users with the
+system. For instance an <code>email address</code> or a <code>username</code>.</em></p>
+</li>
+<li>
+<p><strong>categories:</strong> <em>Used to apply one or more "tags".</em></p>
+</li>
+<li>
+<p><strong>simplePushEndpoint:</strong> <em>SimplePush specific Endpoint URL, which is used
+to send updates to the SimplePush server.</em></p>
+</li>
+</ul>
+</div>
+<div id="reachability" class="paragraph">
+<p>Reachability</p>
+</div>
+<div class="paragraph">
+<p>Internally, the client SDK needs to check if the device can establish a
+connection to the internet (PushNetwork and UnifiedPush Server). It
+should make use of the platform-specific APIs to check the reachability
+of the services.</p>
+</div>
+<div id="unregistration-of-client-device-information" class="paragraph">
+<p>Unregistration of client device information</p>
+</div>
+<div class="paragraph">
+<p><em>Optional</em> method that helps to unregister the client device information
+with the Unified Push Server.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> The method is optional, since not all supported Push Networks
+recommend having a client application actively performing an
+<em>unregister</em>. Apple for instance has a <code>Feedback Service</code>, which the
+<em>AeroGear Unified Push Server</em> needs to frequently query for inactive
+tokens. Tokens, with Apple, are <em>inactive</em> when the user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Disables Push (Settings)</p>
+</li>
+<li>
+<p>Deinstalls the app</p>
+</li>
+</ul>
+</div>
+<div id="reachability-1" class="paragraph">
+<p>Reachability</p>
+</div>
+<div class="paragraph">
+<p>Internally, the client SDK needs to check if the device can establish a
+connection to the internet (PushNetwork and UnifiedPush Server). It
+should make use of the platform-specific APIs to check the reachability
+of the services.</p>
+</div>
+<div id="platform-specific-details" class="paragraph">
+<p>Platform specific details</p>
+</div>
+<div class="paragraph">
+<p>Every client platform has its own base APIs, to receive Push Message
+from its Push Network. The AeroGear client SDK <em>may</em> offer utilities to
+simplify this process even more. <em>For example: In Android a custom
+<code>Intent</code> is required, therefore it would make sense if the "AeroGear
+Android Push Client Library" offers a convenience implementation for
+this class.</em></p>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This is a preview of the https://docs.aerogear.org website.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

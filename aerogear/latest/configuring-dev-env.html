@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+<script>
+function addBlockSwitches() {
+	$('.primary').each(function() {
+		primary = $(this);
+		createSwitchItem(primary, createBlockSwitch(primary)).item.addClass("selected");
+		primary.children('.title').remove();
+	});
+	$('.secondary').each(function(idx, node) {
+		secondary = $(node);
+		primary = findPrimary(secondary);
+		switchItem = createSwitchItem(secondary, primary.children('.switch'));
+		switchItem.content.addClass('hidden');
+		findPrimary(secondary).append(switchItem.content);
+		secondary.remove();
+	});
+}
+
+function createBlockSwitch(primary) {
+	blockSwitch = $('<div class="switch"></div>');
+	primary.prepend(blockSwitch);
+	return blockSwitch;
+}
+
+function findPrimary(secondary) {
+	candidate = secondary.prev();
+	while (!candidate.is('.primary')) {
+		candidate = candidate.prev();
+	}
+	return candidate;
+}
+
+function createSwitchItem(block, blockSwitch) {
+	blockName = block.children('.title').text();
+	content = block.children('.content').first().append(block.next('.colist'));
+	item = $('<div class="switch--item">' + blockName + '</div>');
+	item.on('click', '', content, function(e) {
+		$(this).addClass('selected');
+		$(this).siblings().removeClass('selected');
+		e.data.siblings('.content').addClass('hidden');
+		e.data.removeClass('hidden');
+	});
+	blockSwitch.append(item);
+	return {'item': item, 'content': content};
+}
+
+$(addBlockSwitches);    
+</script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuring your Development Environment :: AeroGear Mobile Services</title>
+    <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/configuring-dev-env.html">
+    <meta name="generator" content="Antora 1.0.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.aerogear.org">AeroGear Mobile Services</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="aerogear" data-version="latest">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#prerequisites">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#procedure">Setting up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#registering">Registering a Mobile Client</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#provisioning">Provisioning a Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#binding">Binding Client/Service</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#localdev">Your Development Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="con_services.html">Mobile Services</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="identity-management.html">Identity Management</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-management.html#setup">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-management.html#user-auth">User Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-management.html#access">Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-management.html#sso">Single Sign On</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="identity-management.html#monitoring">Monitoring Identity Management</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="device-security.html">Device Security</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="ref_api.html">API Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ref_api.html#android">Android</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ref_api.html#ios">iOS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ref_api.html#cordova">Cordova</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ref_api.html#xamarin">Xamarin</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="showcase-apps/index.html">Showcase Apps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps/service-setup.html">Service Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps/identity-management.html">Identity Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps/device-security.html">Device Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps/push-notifications.html">Push Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps/metrics.html">Mobile Metrics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-cli.html">Mobile CLI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="configuring-dev-env.html">Configuring your Development Environment</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/configuring-dev-env.adoc"></a></div>
+</div>
+<article class="doc">
+<h1>Configuring your Development Environment</h1>
+<div class="sect1">
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> You have provisioned one of the Mobile Services as described in <a href="provisioning-services.html" class="page">Provisioning Mobile Services</a>.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> You have associated the service with a Mobile Client as described in <a href="binding-mobile-app-record-to-mobile-services.html" class="page">Binding a Mobile Client with Mobile Services</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="downloading-the-mobile-services-configuration-file"><a class="anchor" href="#downloading-the-mobile-services-configuration-file"></a>Downloading the Mobile Services Configuration File</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to your project in OpenShift.</p>
+</li>
+<li>
+<p>On the <strong>Overview</strong> screen, expand your Mobile Client to view the <strong>CLIENT INFO</strong>.</p>
+</li>
+<li>
+<p>Copy the configuration to your clipboard.</p>
+</li>
+<li>
+<p>Save the contents of the clipboard to a new file called <code>mobile-services.json</code>.</p>
+</li>
+<li>
+<p>Follow the next specific additional instructions depending on your platform:</p>
+</li>
+</ol>
+</div>
+<div class="sidebarblock primary">
+<div class="title">Android</div><div class="content">
+<div class="paragraph">
+<p>Locate this file at the following location in your application project:</p>
+</div>
+<div class="paragraph">
+<p><code>src/main/assets/mobile-services.json</code></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">iOS</div><div class="content">
+<div class="paragraph">
+<p>Locate this file at the following location in your application project:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;app directory&gt;/mobile-services.json</code></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">Cordova</div><div class="content">
+<div class="paragraph">
+<p>Locate this file in your application project and import it using <code>require</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const aerogearConfig = require("./mobile-services.json");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively you can create a JavaScript object and use directly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const aerogearConfig = /* Paste here the contents of the clipboard */;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">Xamarin</div><div class="content">
+<div class="paragraph">
+<p>Locate this file at the following location in your application project:</p>
+</div>
+<div class="paragraph">
+<p><code>Resources/mobile-services.json</code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adding-aerogear-sdk-modules-for-the-mobile-platforms"><a class="anchor" href="#adding-aerogear-sdk-modules-for-the-mobile-platforms"></a>Adding AeroGear SDK modules for the Mobile Platforms</h2>
+<div class="sectionbody">
+<div class="sidebarblock primary">
+<div class="title">Android</div><div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To use the SDK add jcenter to the <code>build.grade</code> file in your project&#8217;s root directory</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">allprojects {
+    repositories {
+        jcenter() // &lt;-- Add This line
+        google()
+    }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the build.gradle file of your app you can begin adding dependencies provided by the SDK.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    ...
+    implementation 'org.aerogear:android-core:1.0.0-alpha'
+    implementation 'org.aerogear:android-push:1.0.0-alpha'
+    implementation 'org.aerogear:android-auth:1.0.0-alpha'
+    implementation 'org.aerogear:android-security:1.0.0-alpha'
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>For push you also need to add a dependency to the Firebase SDK:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
+    ...
+    implementation "com.google.firebase:firebase-messaging:[version]"
+}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To implement certificate pinning in the individual SDKs, see <a href="certificate-pinning.html">the certificate pinning guide</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">iOS</div><div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your project directory (the directory where your <code>.xcodeproj</code> file is), create a plain text file named <code>Podfile</code> (without any file extension) and add the lines below. Replace <code>YourTarget</code> with your actual target name.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+use_frameworks!
+
+target :'YourTarget' do
+    ## Require one of the AeroGear SDK's here
+    pod 'AGSCore', '1.0.0-alpha'
+    pod 'AGSPush', '1.0.0-alpha'
+    pod 'AGSAuth', '1.0.0-alpha'
+    pod 'AGSSecurity', '1.0.0-alpha'
+end</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Then run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">pod install</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Open up <code>.xcworkspace</code> with Xcode and start using the SDK.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Do not use <code>.xcodeproj</code>. If you open a project file instead of a workspace, dependencies will not be correctly configured.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Import the SDK you want to use in the application. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-swift hljs" data-lang="swift">   import AGSAuth</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">Cordova</div><div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a terminal and navigate to your appplication project root folder.</p>
+</li>
+<li>
+<p>Install the AeroGear SDK base project:</p>
+<div class="listingblock bash">
+<div class="content">
+<pre class="highlightjs highlight"><code>npm install @aerogear/app</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>In your application, import and call the "init" method:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">import { init } from "@aerogear/app";
+
+const aerogearConfig = {
+    // Replace with your own configuration
+};
+
+init(aerogearConfig);</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">Xamarin</div><div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your VisualStudio project expand <code>Dependencies &gt; NuGet</code></p>
+</li>
+<li>
+<p>Click on <code>Add packages&#8230;&#8203;</code></p>
+</li>
+<li>
+<p>Select <code>AeroGear.Mobile.Core</code> and depending on your target platforms:</p>
+</li>
+<li>
+<p>for Android:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>also pick <code>AeroGear.Mobile.Core.Platform.Android</code></p>
+</li>
+<li>
+<p>Initialize Core (for Xamarin.Forms):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">var app = new App();
+MobileCoreAndroid.Init(app.GetType().Assembly,ApplicationContext);
+LoadApplication(app);</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Initialize Core (for Legacy Xamarin):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">MobileCoreAndroid.Init(ApplicationContext);</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>for iOS:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>also pick <code>AeroGear.Mobile.Core.Platform.iOS</code></p>
+</li>
+<li>
+<p>Initialize Core (for Xamarin.Forms):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">var app = new App();
+MobileCoreIOS.Init(app.GetType().Assembly);
+LoadApplication(app);</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Initialize Core (for Legacy Xamarin):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">MobileCoreIOS.Init();</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="using-self-signed-certificates-in-mobile-clients" class="sect0"><a class="anchor" href="#using-self-signed-certificates-in-mobile-clients"></a>Using Self-Signed Certificates in Mobile Apps</h1>
+<div class="paragraph">
+<p>Throughout the development lifecycle of a mobile apps, a common
+requirement is to integrate and connect with back-end
+services in a secure manner. However in order for the client
+device to connect over SSL/TLS, it needs to trust the root
+certificate authority. This cert must be installed on the client device
+to ensure that the client trusts server certificates that are signed by
+the certificate authority.</p>
+</div>
+<div class="paragraph">
+<p>When the certificate uses a trusted root certificate authority the cert is installed automatically.
+In a development environment, such as a local OpenShift cluster which uses
+self-signed certificates, you must extract the root certificate from the cluster, install it on the device and mark it as trusted.</p>
+</div>
+<div class="sect1">
+<h2 id="extracting-root-ca"><a class="anchor" href="#extracting-root-ca"></a>Extracting the OpenShift Root Certificate Authority Cert</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log into OpenShift as the admin user. If you followed the steps in the <a href="index.html" class="page">Getting Started</a>, you can log in using <code>admin/admin</code>.</p>
+</li>
+<li>
+<p>Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc get secret router-certs --template='{{index .data "tls.crt"}}' -n default  |  \
+base64 --decode | sed -e '1,/^-----END RSA PRIVATE KEY-----$/ d'  &gt; /tmp/localcluster.crt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resulting file is located in the <code>/tmp</code> directory.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installing-on-device"><a class="anchor" href="#installing-on-device"></a>Installing the OpenShift Root Certificate Authority Cert on a Device</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Configure a pin to ensure the certificate can be installed.</p>
+</li>
+<li>
+<p>Copy the file to your device using one of the following methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>USB <strong>(Android only)</strong> - Attach the device to the machine hosting
+OpenShift via USB and drag the certificate to the devices file system</p>
+</li>
+<li>
+<p>Email attachment - Simply email the certificate to an address
+accessible from the device and download the attachment.</p>
+</li>
+<li>
+<p>Cloud service - Use a cloud storage service such as Dropbox or Google
+Drive which is accessible from the device, browse to the certificate and
+proceed to download it.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Configure your device:</p>
+</li>
+</ol>
+</div>
+<div class="sidebarblock primary">
+<div class="title">Android</div><div class="content">
+<div class="paragraph">
+<p>Go to Settings &gt; Security &gt; Install from storage. It should detect the
+certificate and let you add it to the device.</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock secondary">
+<div class="title">iOS</div><div class="content">
+<div class="paragraph">
+<p>When you download the certificate, the
+device should automatically detect a profile. Simply follow the on
+screen instructions to install it.</p>
+</div>
+<div class="paragraph">
+<p>Versions iOS 10.3 and later require an additional step to trust the now
+installed certificate. Instructions can be found on the
+<a href="https://support.apple.com/en-us/HT204477">Apple support site</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </main>
+</div>
+<footer class="footer">
+  <p>This is a preview of the https://docs.aerogear.org website.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
