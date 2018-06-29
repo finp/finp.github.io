@@ -98,7 +98,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="#provisioning">Provisioning a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#binding">Binding Client/Service</a>
+    <a class="nav-link" href="#binding">Binding Client Service</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#localdev">Setting Up Development Environment</a>
@@ -107,6 +107,9 @@ $(addBlockSwitches);
     <a class="nav-link" href="#running">Running the mobile app</a>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-clients.html">Mobile Clients</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="con_services.html">Mobile Services</a>
@@ -308,6 +311,56 @@ $(addBlockSwitches);
 </div>
 <article class="doc">
 <h1>Getting Started with AeroGear Mobile Services</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#setting-up-aerogear-mobile-services-on-openshift">Setting up AeroGear Mobile Services on OpenShift</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#procedure">Procedure</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#getting-started-with-an-openshift-project">Getting Started with an OpenShift Project</a></li>
+</ul>
+</li>
+<li><a href="#registering">Registering a Mobile Client</a></li>
+<li><a href="#provisioning">Provisioning your First Service</a></li>
+<li><a href="#provisioning-identity-management-service">Provisioning Identity Management Service</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites-3">Prerequisites</a></li>
+<li><a href="#additional-information">Additional Information</a></li>
+<li><a href="#next-steps-2">Next steps</a></li>
+</ul>
+</li>
+<li><a href="#binding">Binding a Mobile Client with the Identity Management Service</a>
+<ul class="sectlevel2">
+<li><a href="#next-steps-3">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#localdev">Setting Up your Local Development Environment</a>
+<ul class="sectlevel2">
+<li><a href="#supported-environments">Supported Environments</a></li>
+<li><a href="#configuring-your-development-environment-for-the-identity-management-service">Configuring your Development Environment for the Identity Management Service</a></li>
+</ul>
+</li>
+<li><a href="#downloading-the-mobile-services-configuration-file">Downloading the Mobile Services Configuration File</a></li>
+<li><a href="#keycloak-setup">Keycloak Setup</a>
+<ul class="sectlevel2">
+<li><a href="#choose-the-schema-of-a-redirect-url">Choose the schema of a redirect url</a></li>
+<li><a href="#configuring-keycloak">Configuring Keycloak</a></li>
+</ul>
+</li>
+<li><a href="#running">Running your First Mobile App</a>
+<ul class="sectlevel2">
+<li><a href="#clone-the-showcase-app">Clone the showcase app:</a></li>
+<li><a href="#using-self-signed-certificates-in-mobile-apps">Using Self-Signed Certificates in Mobile Apps</a></li>
+<li><a href="#downloading-the-mobile-services-configuration-file-2">Downloading the Mobile Services Configuration File</a></li>
+<li><a href="#running-the-mobile-app-in-an-emulator">Running the Mobile App in an Emulator</a></li>
+</ul>
+</li>
+<li><a href="#doing-stuff">Doing Stuff</a></li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="setting-up-aerogear-mobile-services-on-openshift"><a class="anchor" href="#setting-up-aerogear-mobile-services-on-openshift"></a>Setting up AeroGear Mobile Services on OpenShift</h2>
 <div class="sectionbody">
@@ -604,7 +657,7 @@ oc cluster up --host-data-dir=$CORE_LOC/ui/openshift-data --routing-suffix=&lt;I
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> You have installed OpenShift with Mobile Services as described in <a href="index.html" class="page">Getting Started</a>.</p>
+<p><i class="fa fa-check-square-o"></i> You have installed OpenShift with Mobile Services as described in <a href="#">index.adoc</a>.</p>
 </li>
 </ul>
 </div>
@@ -1113,7 +1166,7 @@ self-signed certificates, you must extract the root certificate from the cluster
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Log into OpenShift as the admin user. If you followed the steps in the <a href="index.html" class="page">Getting Started</a>, you can log in using <code>admin/admin</code>.</p>
+<p>Log into OpenShift as the admin user. If you followed the steps in the <a href="#">index.adoc</a>, you can log in using <code>admin/admin</code>.</p>
 </li>
 <li>
 <p>Run the following command:</p>

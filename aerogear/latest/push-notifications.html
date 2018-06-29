@@ -98,7 +98,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html#provisioning">Provisioning a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#binding">Binding Client/Service</a>
+    <a class="nav-link" href="getting-started.html#binding">Binding Client Service</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html#localdev">Setting Up Development Environment</a>
@@ -107,6 +107,9 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mobile-clients.html">Mobile Clients</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="con_services.html">Mobile Services</a>
@@ -308,6 +311,42 @@ $(addBlockSwitches);
 </div>
 <article class="doc">
 <h1>Using the Push Notifications Mobile Service</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#con_introduction-to-push-notification_con_introduction-to-push-notification">About Push Notifications Service</a>
+<ul class="sectlevel2">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#ref_terminology_Push Notifications_ref_terminology">Push Notifications Terminology</a></li>
+<li><a href="#privacy-note">Privacy note</a></li>
+<li><a href="#how-the-unifiedpush-server-works">How the UnifiedPush Server Works</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#setup">Setting Up the Identity Management Mobile Service</a>
+<ul class="sectlevel2">
+<li><a href="#obtaining-firebase-cloud-messaging-credentials">Obtaining Firebase Cloud Messaging Credentials</a></li>
+<li><a href="#proc_preparing-ups-for-use-with-ios_preparing-ups-for-use-with-ios">Enable Push Notifications for iOS App</a></li>
+<li><a href="#provisioning-push-notifications-service">Provisioning Push Notifications Service</a></li>
+<li><a href="#binding-a-mobile-client-with-the-push-notifications-service">Binding a Mobile Client with the Push Notifications service</a></li>
+<li><a href="#coding-a-push-notifications-app">Coding a Push Notifications App</a></li>
+</ul>
+</li>
+<li><a href="#configuring-your-development-environment-for-the-push-notifications-service">Configuring your Development Environment for the Push Notifications Service</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites-4">Prerequisites</a></li>
+</ul>
+</li>
+<li><a href="#downloading-the-mobile-services-configuration-file">Downloading the Mobile Services Configuration File</a>
+<ul class="sectlevel2">
+<li><a href="#next-steps-5">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#push-ui">Accessing Push Notifications using the Unified Push Admin UI</a></li>
+<li><a href="#sending">Sending a Push Notification</a></li>
+<li><a href="#handling">Handling Push Notifications</a></li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="con_introduction-to-push-notification_con_introduction-to-push-notification"><a class="anchor" href="#con_introduction-to-push-notification_con_introduction-to-push-notification"></a>About Push Notifications Service</h2>
 <div class="sectionbody">
