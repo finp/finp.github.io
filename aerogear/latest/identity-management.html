@@ -249,22 +249,28 @@ $(addBlockSwitches);
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="showcase-apps/index.html">Showcase Apps</a>
+    <a class="nav-link" href="showcase-apps.html">Showcase Apps</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps/service-setup.html">Service Setup</a>
+    <a class="nav-link" href="showcase-apps.html#features">Showcase App Features</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps/identity-management.html">Identity Management</a>
+    <a class="nav-link" href="showcase-apps.html#setup">Service Setup</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps/device-security.html">Device Security</a>
+    <a class="nav-link" href="showcase-apps.html#app">Showcase App Setup</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps/push-notifications.html">Push Notifications</a>
+    <a class="nav-link" href="showcase-apps.html#binding">Service Binding</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps/metrics.html">Mobile Metrics</a>
+    <a class="nav-link" href="showcase-apps.html#json">Downloading the service-config file</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps.html#build">Building and Running the Showcase Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="showcase-apps.html#certs">Using Self Signed Certs</a>
   </li>
 </ul>
   </li>
@@ -311,6 +317,60 @@ $(addBlockSwitches);
 </div>
 <article class="doc">
 <h1>About Identity Management</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#ref_terminology_Identity Management_ref_terminology">Identity Management Terminology</a></li>
+<li><a href="#ref_terminology_Identity Management_additional-resources-ref_terminology_Identity Management">Additional resources</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+<li><a href="#setup">Setting Up the Identity Management Mobile Service</a>
+<ul class="sectlevel2">
+<li><a href="#provisioning-identity-management-service">Provisioning Identity Management Service</a></li>
+<li><a href="#binding-a-mobile-client-with-the-identity-management-service">Binding a Mobile Client with the Identity Management Service</a></li>
+<li><a href="#configuring-your-development-environment-for-the-identity-management-service">Configuring your Development Environment for the Identity Management Service</a></li>
+</ul>
+</li>
+<li><a href="#downloading-the-mobile-services-configuration-file">Downloading the Mobile Services Configuration File</a></li>
+<li><a href="#keycloak-setup">Keycloak Setup</a>
+<ul class="sectlevel2">
+<li><a href="#choose-the-schema-of-a-redirect-url">Choose the schema of a redirect url</a></li>
+<li><a href="#configuring-keycloak">Configuring Keycloak</a></li>
+</ul>
+</li>
+<li><a href="#user-auth">Adding User Authentication to your Mobile App</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites-4">Prerequisites</a></li>
+<li><a href="#implementing-authentication">Implementing authentication</a></li>
+<li><a href="#adding-log-out-option-to-your-mobile-app">Adding Log Out Option to your Mobile App</a></li>
+<li><a href="#additional-resources">Additional resources</a></li>
+<li><a href="#next-steps-5">Next steps</a></li>
+</ul>
+</li>
+<li><a href="#access">Adding Access Control to your Mobile App</a>
+<ul class="sectlevel2">
+<li><a href="#next-steps-6">Next steps</a></li>
+</ul>
+</li>
+<li><a href="#sso">Adding Single Sign-On (SSO) to your Mobile App</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites-5">Prerequisites</a></li>
+<li><a href="#using-sso-with-the-device-browser">Using SSO with the Device Browser</a></li>
+<li><a href="#known-issues">Known Issues</a></li>
+</ul>
+</li>
+<li><a href="#monitoring">Monitoring Identity Management Service</a>
+<ul class="sectlevel2">
+<li><a href="#prerequisites-6">Prerequisites</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#dashboard-panel-descriptions">Dashboard panel descriptions</a></li>
+<li><a href="#singlestat-panels">Singlestat Panels</a></li>
+<li><a href="#graph-panels">Graph panels</a></li>
+<li><a href="#pie-charts">Pie Charts</a></li>
+<li><a href="#additional-resources-2">Additional resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
