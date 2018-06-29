@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-8+rznmq/k0KZkJlZhnuPEVkbRD7tA0wcFEjY48dajGWn3Xc1MasJwS8/tJ7OEsKW" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" integrity="sha384-Nud2SriDt2fZ+u85IBC48Yn9p+l4AGlapnX1EGA2KrnZjYJx8sxKnw/CIxc1wU1B" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
 <script>
 function addBlockSwitches() {
@@ -64,94 +59,22 @@ $(addBlockSwitches);
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.aerogear.org">AeroGear Mobile Services</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <a class="navbar-brand" href="/index.html">AeroGear</a>
     </div>
+    <div id="topbar-nav" class="navbar-menu">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        
-        <li>
-          <a href="https://staging.aerogear.org">Home</a>
-        </li>
-
-        <li>
-          <a href="https://staging.aerogear.org/getting-started/overview/">Getting Started</a>
-        </li>
-
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile Services<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="https://staging.aerogear.org/services/mobile-ci-cd/">
-                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/push/">
-                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/metrics/">
-                  <i class="material-icons" aria-hidden="true">insert_chart</i> Metrics
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/runtime-connector/">
-                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/identity-management/">
-                  <i class="material-icons" aria-hidden="true">account_circle</i> Identity Management
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/device-security/">
-                  <i class="material-icons" aria-hidden="true">security</i> Device Security
-                </a>
-              </li>
-            </ul>
-        </li>
-
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile SDKs<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-            <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-          </ul>
-        </li>
-
-        <li class="hidden-sm active">
-          <a href="https://docs.aerogear.org">Docs</a>
-        </li>
-   
-        <li>
-          <a href="https://staging.aerogear.org/community">Community</a>
-        </li>
-        
-
-        <li>
-          <a href="https://staging.aerogear.org/news">News</a>
-        </li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav><div class="main-wrapper">
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
 <div class="navigation-container" data-component="aerogear" data-version="latest">
   <aside class="navigation" role="navigation">
     <div class="panels">
@@ -166,10 +89,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html">Getting Started</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#prerequisites">Prerequisites</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#procedure">Setting up</a>
+    <a class="nav-link" href="getting-started.html#procedure">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html#registering">Registering a Mobile Client</a>
@@ -181,7 +101,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html#binding">Binding Client/Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#localdev">Your Development Environment</a>
+    <a class="nav-link" href="getting-started.html#localdev">Setting Up Development Environment</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
@@ -189,62 +109,134 @@ $(addBlockSwitches);
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-toggle"></button>
     <a class="nav-link" href="con_services.html">Mobile Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
     <a class="nav-link" href="identity-management.html">Identity Management</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="identity-management.html#setup">Setup</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="identity-management.html#setup">Setting Up</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#user-auth">User Authentication</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#access">Access Control</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#sso">Single Sign On</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#monitoring">Monitoring Identity Management</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
     <a class="nav-link" href="push-notifications.html">Push Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="push-notifications.html#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
+    <a class="nav-link" href="push-notifications.html#push-ui">Using the Push Admin UI</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
+    <a class="nav-link" href="push-notifications.html#sending">Sending a Notification</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="device-security.html">Device Security</a>
+    <a class="nav-link" href="push-notifications.html#handling">Handling a Notification</a>
   </li>
 </ul>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="ref_api.html">API Reference</a>
+    <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#android">Android</a>
+    <a class="nav-link" href="runtime-connector.html#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#ios">iOS</a>
+    <a class="nav-link" href="runtime-connector.html#creating">Creating an API Server</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#cordova">Cordova</a>
+    <a class="nav-link" href="runtime-connector.html#connecting">Connecting to an API Server</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#xamarin">Xamarin</a>
+    <a class="nav-link" href="runtime-connector.html#calling">Calling APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-connector.html#updating">Updating Runtime Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-connector.html#securing">Securing an API Server</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#setup">Setting Up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#app">App and Device</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#setup">Device Trust</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#setup">Identity Management</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-cicd.html#setup">Setting Up</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="device-security.html">Device Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="device-security.html#setup">Setting Up</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ref_api.html">API Reference</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -306,10 +298,9 @@ $(addBlockSwitches);
   <main class="main" role="main">
 <div class="toolbar" role="navigation">
   <button class="navigation-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="getting-started.html" class="home-link"></a>
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="con_services.html">Mobile Services</a></li>
     <li class="crumb"><a href="mobile-metrics.html">Mobile Metrics</a></li>
   </ul>
 </nav>
@@ -372,10 +363,12 @@ $(addBlockSwitches);
 </div>
 </div>
 <div class="sect1">
-<h2 id="provisioning-metrics-service"><a class="anchor" href="#provisioning-metrics-service"></a>Provisioning Metrics Service</h2>
+<h2 id="setup"><a class="anchor" href="#setup"></a>Setting Up the Mobile Metrics Service</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h3>
+<h3 id="provisioning-metrics-service"><a class="anchor" href="#provisioning-metrics-service"></a>Provisioning Metrics Service</h3>
+<div class="sect3">
+<h4 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h4>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -412,7 +405,7 @@ $(addBlockSwitches);
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-When prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind at this time</strong>
+If prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind at this time</strong>
 </td>
 </tr>
 </table>
@@ -478,18 +471,18 @@ When prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind a
 </table>
 </div>
 <div class="paragraph">
-<p>After the service has been provisioned, you should then be able to see it in the project overview.</p>
+<p>After the service is provisioned, you can see it in the project overview.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="deprovisioning"><a class="anchor" href="#deprovisioning"></a>Deprovisioning</h3>
+<div class="sect3">
+<h4 id="additional-information"><a class="anchor" href="#additional-information"></a>Additional Information</h4>
 <div class="paragraph">
 <p>In order to delete a provisioned service, select the service menu and click <strong>Delete</strong>. A notification
 appears that the service has now been <strong>Marked for Deletion</strong>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps-2"><a class="anchor" href="#next-steps-2"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-2"><a class="anchor" href="#next-steps-2"></a>Next Steps</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -499,12 +492,10 @@ appears that the service has now been <strong>Marked for Deletion</strong>.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="binding-a-mobile-client-with-the-metrics-service"><a class="anchor" href="#binding-a-mobile-client-with-the-metrics-service"></a>Binding a Mobile Client with the Metrics Service</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites-2"><a class="anchor" href="#prerequisites-2"></a>Prerequisites</h3>
+<h3 id="binding-a-mobile-client-with-the-metrics-service"><a class="anchor" href="#binding-a-mobile-client-with-the-metrics-service"></a>Binding a Mobile Client with the Metrics Service</h3>
+<div class="sect3">
+<h4 id="prerequisites-2"><a class="anchor" href="#prerequisites-2"></a>Prerequisites</h4>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -566,8 +557,8 @@ Your mobile app will be represented by two items in OpenShift, an item in the <s
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps-3"><a class="anchor" href="#next-steps-3"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-3"><a class="anchor" href="#next-steps-3"></a>Next Steps</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -577,12 +568,10 @@ Your mobile app will be represented by two items in OpenShift, an item in the <s
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="configuring-your-development-environment-for-the-metrics-service"><a class="anchor" href="#configuring-your-development-environment-for-the-metrics-service"></a>Configuring your Development Environment for the Metrics Service</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites-3"><a class="anchor" href="#prerequisites-3"></a>Prerequisites</h3>
+<h3 id="configuring-your-development-environment-for-the-metrics-service"><a class="anchor" href="#configuring-your-development-environment-for-the-metrics-service"></a>Configuring your Development Environment for the Metrics Service</h3>
+<div class="sect3">
+<h4 id="prerequisites-3"><a class="anchor" href="#prerequisites-3"></a>Prerequisites</h4>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -592,6 +581,7 @@ Your mobile app will be represented by two items in OpenShift, an item in the <s
 <p><i class="fa fa-check-square-o"></i> You have associated the service with a Mobile Client as described in <a href="metrics/binding.html" class="page">Binding a Mobile Client with the Metrics Service</a></p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -671,8 +661,8 @@ Your mobile app will be represented by two items in OpenShift, an item in the <s
 <div class="paragraph">
 <p>Metrics will be sent automatically from the mobile app once any of the components from AeroGear SDK are installed.</p>
 </div>
-<div class="sect2">
-<h3 id="next-steps-4"><a class="anchor" href="#next-steps-4"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-4"><a class="anchor" href="#next-steps-4"></a>Next Steps</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -684,7 +674,7 @@ Your mobile app will be represented by two items in OpenShift, an item in the <s
 </div>
 </div>
 <div class="sect1">
-<h2 id="analyzing-app-usage"><a class="anchor" href="#analyzing-app-usage"></a>Analyzing App Usage</h2>
+<h2 id="app"><a class="anchor" href="#app"></a>Analyzing App Usage</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This guide shows how to use app metrics to provide rich visualizations regarding app usage that can then drive development planning, for example, when should support for  version x.y of app end?'</p>
@@ -784,6 +774,142 @@ It can also be useful to see the uptake rate of newly published versions of an A
 </li>
 </ul>
 </div>
+<div id="trust" class="paragraph">
+<p>include::metrics/analysing-trust-checks.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="identity"><a class="anchor" href="#identity"></a>Monitoring Identity Management Service</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="prerequisites-5"><a class="anchor" href="#prerequisites-5"></a>Prerequisites</h3>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> You have provisioned the Mobile Metrics Service as described in <a href="metrics/provisioning.html" class="page">Provisioning Mobile Metrics Service</a>.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> You have provisioned the Identity Management Service as described in <a href="keycloak/provisioning.html" class="page">Provisioning Identity Management Service</a>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Mobile Metrics Service and Identity Management Service must be provisioned in the same OpenShift project to access data.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="overview"><a class="anchor" href="#overview"></a>Overview</h3>
+<div class="paragraph">
+<p>After the Mobile Metrics Service (includes Grafana for visualization and the Prometheus monitoring system) and Identity Management Service are provisioned,
+you should be able to see the "Keycloak Metrics" in the list of available dashboards (navigate to Grafana&#8217;s exposed URL &#8594; Log in &#8594; Home &#8594; Select <strong>Keycloak Metrics</strong>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dashboard-panel-descriptions"><a class="anchor" href="#dashboard-panel-descriptions"></a>Dashboard panel descriptions</h3>
+<div class="paragraph">
+<p>The Keycloak dashboard consists of several panels which give you an overview of the specific
+events, such as the number of registered users, memory usage etc.</p>
+</div>
+<div class="paragraph">
+<p>Below you will find a detailed description of each panel and its values.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="singlestat-panels"><a class="anchor" href="#singlestat-panels"></a>Singlestat Panels</h3>
+<div class="paragraph">
+<p>Singlestat panels show you the main summary of a single data series.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Total Registrations</strong>: Total number of registered (non-admin) users. This number comprises all successful registrations made via various providers, e.g. Keycloak, Github, Facebook etc.</p>
+</li>
+<li>
+<p><strong>Total Logins</strong>: Total number of successful logins (only non-admin users) over all providers.</p>
+</li>
+<li>
+<p><strong>Total Login Errors</strong>: Total number of failed login attempts.</p>
+</li>
+<li>
+<p><strong>Current Memory</strong>: The amount of memory currently used by the Identity Management Service</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="graph-panels"><a class="anchor" href="#graph-panels"></a>Graph panels</h3>
+<div class="paragraph">
+<p>Used to show how certain values change over time, e.g. the number of successful logins.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Logins</strong>: Overview of the successful logins over time</p>
+</li>
+<li>
+<p><strong>Login Errors</strong>: Overview of the failed login attempts over time</p>
+</li>
+<li>
+<p><strong>Memory Usage</strong>: The values in this graph represents the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Used</strong>: The amount of memory currently used by the Identity Management Service</p>
+</li>
+<li>
+<p><strong>Commited</strong>: The amount of memory that is guaranteed to be available for use (by JVM)</p>
+</li>
+<li>
+<p><strong>Max</strong>: The maximum amount of memory that can be used for memory management</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pie-charts"><a class="anchor" href="#pie-charts"></a>Pie Charts</h3>
+<div class="paragraph">
+<p>Used to show the distribution of data, e.g. the number of logins per identity provider.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Logins Per Provider</strong>: Overview of the successful (non-admin) user logins per provider</p>
+</li>
+<li>
+<p><strong>Registrations Per Provider</strong>: Overview of the successful (non-admin) user registrations per provider.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="additional-resources"><a class="anchor" href="#additional-resources"></a>Additional resources</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://docs.grafana.org/features/panels/singlestat/#singlestat-panel">Singlestat Panel</a></p>
+</li>
+<li>
+<p><a href="http://docs.grafana.org/features/panels/graph/#graph-panel">Graph Panel</a></p>
+</li>
+<li>
+<p><a href="https://grafana.com/plugins/grafana-piechart-panel">Pie Chart</a></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -791,78 +917,8 @@ It can also be useful to see the uptake rate of newly published versions of an A
   </main>
 </div>
 <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <h5>Getting Started</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://staging.aerogear.org/getting-started/overview/">Overview</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/installation-and-configuration/">Installation &amp; Configuration</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/creating-mobile-apps/">Creating Mobile Apps</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/enabling-mobile-services/">Enabling Mobile Services</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-3">
-        <h5>Mobile Services</h5>
-        <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
-         <li><a href="https://staging.aerogear.org/services/push/">Push Notifications</a></li>
-         <li><a href="https://staging.aerogear.org/services/metrics/">Metrics</a></li>
-         <li><a href="https://staging.aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
-         <li><a href="https://staging.aerogear.org/services/identity-management/">Identity Management</a></li>
-         <li><a href="https://staging.aerogear.org/services/device-security/">Device Security</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-3">
-        <h5>Mobile SDKs</h5>
-        <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-         <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-        </ul>
-      </div><!-- col -->
-      
-      <div class="col-sm-3">
-        <h5>COMMUNITY</h5>
-        <ul class="list-unstyled">
-          <li><a target="_blank" href="https://github.com/aerogear/">GitHub - Aerogear</a></li>
-          <li><a target="_blank" href="https://github.com/aerogearcatalog/">GitHub - Aerogear Catalog</a></li>
-          <li><a target="_blank" href="https://issues.jboss.org/browse/AEROGEAR">Jira Repo Issues</a></li>
-          <li><a  href="https://staging.aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
-          <li><a target="_blank" href="https://groups.google.com/forum/#!forum/aerogear">Google Group</a></li>
-          <li><a href="irc://irc.freenode.net/aerogear">IRC</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-12 follow">
-        <h5>FOLLOW US</h5>
-        <ul class="list-inline">
-          <li><a target="_blank" href="https://www.twitter.com/aerogears"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-          <li><a target="_blank" href="https://www.youtube.com/channel/UCgDcDoN2b7cEI63fgpxACBA"><i class="fa fa-youtube"></i> YouTube</a></li>
-          <li><a target="_blank" href="/feed.atom"><i class="fa fa-rss-square"></i> Feed</a></li>
-        </ul>
-        
-        <p>AeroGear project is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a></p>
-      </div><!-- col -->
-    
-    </div><!-- row -->
-
-  </div><!-- container -->
-
-</footer><!-- footer -->
-
-<section class="redhat">
-  <div class="container">
-    <p class="text-center">
-      <a href="http://www.redhat.com/">
-        <img src="/_/img/redhatlogo-wite.png" alt="redhatlogo-wite" width="130">
-      </a>
-    </p>       
-  </div><!-- container -->
-</section>
+  <p>This is a preview of the https://docs.aerogear.org website.</p>
+</footer>
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>

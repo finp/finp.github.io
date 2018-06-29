@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-8+rznmq/k0KZkJlZhnuPEVkbRD7tA0wcFEjY48dajGWn3Xc1MasJwS8/tJ7OEsKW" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" integrity="sha384-Nud2SriDt2fZ+u85IBC48Yn9p+l4AGlapnX1EGA2KrnZjYJx8sxKnw/CIxc1wU1B" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
 <script>
 function addBlockSwitches() {
@@ -58,100 +53,28 @@ $(addBlockSwitches);
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: AeroGear Mobile Services</title>
+    <title>Using the Push Notifications Mobile Service :: AeroGear Mobile Services</title>
     <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/push-notifications.html">
     <meta name="generator" content="Antora 1.0.1">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.aerogear.org">AeroGear Mobile Services</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      <a class="navbar-brand" href="/index.html">AeroGear</a>
     </div>
+    <div id="topbar-nav" class="navbar-menu">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        
-        <li>
-          <a href="https://staging.aerogear.org">Home</a>
-        </li>
-
-        <li>
-          <a href="https://staging.aerogear.org/getting-started/overview/">Getting Started</a>
-        </li>
-
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile Services<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a href="https://staging.aerogear.org/services/mobile-ci-cd/">
-                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/push/">
-                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/metrics/">
-                  <i class="material-icons" aria-hidden="true">insert_chart</i> Metrics
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/runtime-connector/">
-                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/identity-management/">
-                  <i class="material-icons" aria-hidden="true">account_circle</i> Identity Management
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/device-security/">
-                  <i class="material-icons" aria-hidden="true">security</i> Device Security
-                </a>
-              </li>
-            </ul>
-        </li>
-
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile SDKs<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-            <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-          </ul>
-        </li>
-
-        <li class="hidden-sm active">
-          <a href="https://docs.aerogear.org">Docs</a>
-        </li>
-   
-        <li>
-          <a href="https://staging.aerogear.org/community">Community</a>
-        </li>
-        
-
-        <li>
-          <a href="https://staging.aerogear.org/news">News</a>
-        </li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav><div class="main-wrapper">
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
 <div class="navigation-container" data-component="aerogear" data-version="latest">
   <aside class="navigation" role="navigation">
     <div class="panels">
@@ -166,10 +89,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html">Getting Started</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#prerequisites">Prerequisites</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#procedure">Setting up</a>
+    <a class="nav-link" href="getting-started.html#procedure">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html#registering">Registering a Mobile Client</a>
@@ -181,7 +101,7 @@ $(addBlockSwitches);
     <a class="nav-link" href="getting-started.html#binding">Binding Client/Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#localdev">Your Development Environment</a>
+    <a class="nav-link" href="getting-started.html#localdev">Setting Up Development Environment</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
@@ -189,62 +109,134 @@ $(addBlockSwitches);
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-toggle"></button>
     <a class="nav-link" href="con_services.html">Mobile Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
     <a class="nav-link" href="identity-management.html">Identity Management</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="identity-management.html#setup">Setup</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="identity-management.html#setup">Setting Up</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#user-auth">User Authentication</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#access">Access Control</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#sso">Single Sign On</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="identity-management.html#monitoring">Monitoring Identity Management</a>
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-toggle"></button>
     <a class="nav-link" href="push-notifications.html">Push Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
+    <a class="nav-link" href="#push-ui">Using the Push Admin UI</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
+    <a class="nav-link" href="#sending">Sending a Notification</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="device-security.html">Device Security</a>
+    <a class="nav-link" href="#handling">Handling a Notification</a>
   </li>
 </ul>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-toggle"></button>
-    <a class="nav-link" href="ref_api.html">API Reference</a>
+    <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#android">Android</a>
+    <a class="nav-link" href="runtime-connector.html#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#ios">iOS</a>
+    <a class="nav-link" href="runtime-connector.html#creating">Creating an API Server</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#cordova">Cordova</a>
+    <a class="nav-link" href="runtime-connector.html#connecting">Connecting to an API Server</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ref_api.html#xamarin">Xamarin</a>
+    <a class="nav-link" href="runtime-connector.html#calling">Calling APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-connector.html#updating">Updating Runtime Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-connector.html#securing">Securing an API Server</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-metrics.html#setup">Setting Up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-metrics.html#app">App and Device</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-metrics.html#setup">Device Trust</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-metrics.html#setup">Identity Management</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="mobile-cicd.html#setup">Setting Up</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="device-security.html">Device Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="device-security.html#setup">Setting Up</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ref_api.html">API Reference</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -306,16 +298,16 @@ $(addBlockSwitches);
   <main class="main" role="main">
 <div class="toolbar" role="navigation">
   <button class="navigation-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="getting-started.html" class="home-link"></a>
 <nav class="crumbs" role="navigation" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="con_services.html">Mobile Services</a></li>
     <li class="crumb"><a href="push-notifications.html">Push Notifications</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/push-notifications.adoc"></a></div>
 </div>
 <article class="doc">
+<h1>Using the Push Notifications Mobile Service</h1>
 <div class="sect1">
 <h2 id="con_introduction-to-push-notification_con_introduction-to-push-notification"><a class="anchor" href="#con_introduction-to-push-notification_con_introduction-to-push-notification"></a>About Push Notifications Service</h2>
 <div class="sectionbody">
@@ -450,10 +442,167 @@ When using the UnifiedPush Server, please keep in mind that Push notification is
 </div>
 </div>
 <div class="sect1">
-<h2 id="provisioning-push-notifications-service"><a class="anchor" href="#provisioning-push-notifications-service"></a>Provisioning Push Notifications Service</h2>
+<h2 id="setup"><a class="anchor" href="#setup"></a>Setting Up the Identity Management Mobile Service</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h3>
+<h3 id="obtaining-firebase-cloud-messaging-credentials"><a class="anchor" href="#obtaining-firebase-cloud-messaging-credentials"></a>Obtaining Firebase Cloud Messaging Credentials</h3>
+<div class="paragraph">
+<p>Before the Android application is able to receive the notifications, you must set up access to Firebase Cloud Messaging. As with iOS, you are only able to test out your push notifications in a real device. This section shows you how to obtain the credentials necessary to set up Firebase Cloud Messaging for your app, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <strong>Server key</strong></p>
+</li>
+<li>
+<p>the <strong>Sender ID</strong></p>
+</li>
+<li>
+<p>the <code>google-services.json</code> file containing the credentials required to connect your app to Firebase and Google services.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="project-setup-and-app-registration-using-the-firebase-console"><a class="anchor" href="#project-setup-and-app-registration-using-the-firebase-console"></a>Project Setup and App Registration using the Firebase Console</h4>
+<div class="paragraph">
+<p>First, register with the Firebase Cloud Messaging (FCM) platform, formerly known as Google Cloud Messaging (GCM). You need a Google Account to do this. Start by opening the <a href="https://console.firebase.google.com">Firebase Console</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If you haven&#8217;t created a project, click <strong>Create New Project</strong>:</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create_new_project.png" alt="Create New Project">
+</div>
+</div>
+</li>
+<li>
+<p>Now give your new project a name:</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/project_name.png" alt="New Project Name">
+</div>
+</div>
+</li>
+<li>
+<p>Once the project has been created you will be taken to the <em>Overview</em> screen. From there click the Settings icon located next to the project name in the sidebar, and in the pop-up menu click <strong>Project Settings</strong>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/project_settings.png" alt="Project Settings">
+</div>
+</div>
+</li>
+<li>
+<p>On the <em>Project Settings</em> screen, switch to the <em>Cloud Messaging</em> tab, where you can find the <strong>Server key</strong> and <strong>Sender ID</strong> (known in GCM as <strong>Project Number</strong>). There is also a <em>Legacy server key</em> but it should not be used for new projects.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/retrieve_credentials.png" alt="Retrieve Credentials">
+</div>
+</div>
+</li>
+<li>
+<p>As the final step of the setup procedure, you need to download the <code>google-services.json</code> file. To do this, first navigate to the <em>Project Overview</em> screen. If this is the first app in your project, click on <code>Add Firebase to my Android app</code> at the top of the page, otherwise click on <strong>Add another App</strong>. In the popup select <em>Add Firebase to your Android app</em>.</p>
+</li>
+<li>
+<p>In the pop-up window enter the Package name of your app and then click the <strong>Register app</strong> button. In the next step you can download the <code>google-services.json</code> file. This file needs to be built into your app binary. Download the JSON file and save it. Click <strong>Next</strong> on the following screens. Skip the step to install the Firebase SDK. Google will send an initial push notification for verification but you can skip this step too if you don&#8217;t have a running app yet.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/download_json.png" alt="Download google-services.json">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To re-download the <code>google-services.json</code> file, navigate to the <em>Project Settings</em> screen, then switch to the <em>General</em> tab, choose the desired app under <code>Your Apps</code> and click the <code>google-services.json</code> download button.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>At this point Firebase is ready to deliver your messages and you can continue setting up the UnifiedPush server.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proc_preparing-ups-for-use-with-ios_preparing-ups-for-use-with-ios"><a class="anchor" href="#proc_preparing-ups-for-use-with-ios_preparing-ups-for-use-with-ios"></a>Enable Push Notifications for iOS App</h3>
+<div class="paragraph">
+<p>The following guide helps you to enable Push Notifications for your iOS application.</p>
+</div>
+<h4 id="prerequisites" class="discrete">Prerequisites</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>An Apple developer account</p>
+</li>
+<li>
+<p>A Mac</p>
+</li>
+</ul>
+</div>
+<h4 id="procedure" class="discrete">Procedure</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Follow the <a href="https://help.apple.com/xcode/mac/current/#/devdfd3d04a1">official guide</a> to enable push notifications for your Xcode project.</p>
+</li>
+<li>
+<p>Follow  the <a href="https://help.apple.com/developer-account/#/dev82a71386a">official guide</a> to generate an APNs client TLS certificate and export the client TLS identity from your Mac.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure to protect the p12 file with a password.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The exported p12 file with the password will be used later when binding your Mobile Client to the Push Notifications.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<h4 id="next-steps-2" class="discrete">Next Steps</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="push/binding.html" class="page">Bind your Mobile Client to the Push Notifications</a>.</p>
+</li>
+</ul>
+</div>
+<h4 id="additional-resources" class="discrete">Additional Resources</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>For more information, see <a href="push/index.html" class="page">Push Notifications</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="provisioning-push-notifications-service"><a class="anchor" href="#provisioning-push-notifications-service"></a>Provisioning Push Notifications Service</h3>
+<div class="sect3">
+<h4 id="prerequisites-2"><a class="anchor" href="#prerequisites-2"></a>Prerequisites</h4>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -490,7 +639,7 @@ When using the UnifiedPush Server, please keep in mind that Push notification is
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-When prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind at this time</strong>
+If prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind at this time</strong>
 </td>
 </tr>
 </table>
@@ -499,18 +648,18 @@ When prompted to <strong>Create a Binding</strong>, choose <strong>Do not bind a
 </ol>
 </div>
 <div class="paragraph">
-<p>After the service has been provisioned, you should then be able to see it in the project overview.</p>
+<p>After the service is provisioned, you can see it in the project overview.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="deprovisioning"><a class="anchor" href="#deprovisioning"></a>Deprovisioning</h3>
+<div class="sect3">
+<h4 id="additional-information"><a class="anchor" href="#additional-information"></a>Additional Information</h4>
 <div class="paragraph">
 <p>In order to delete a provisioned service, select the service menu and click <strong>Delete</strong>. A notification
 appears that the service has now been <strong>Marked for Deletion</strong>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps-2"><a class="anchor" href="#next-steps-2"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-3"><a class="anchor" href="#next-steps-3"></a>Next Steps</h4>
 <div class="paragraph">
 <p><a href="registering-a-mobile-app.html" class="page">Registering a Mobile App</a></p>
 </div>
@@ -519,12 +668,10 @@ appears that the service has now been <strong>Marked for Deletion</strong>.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="binding-a-mobile-client-with-the-push-notifications-service"><a class="anchor" href="#binding-a-mobile-client-with-the-push-notifications-service"></a>Binding a Mobile Client with the Push Notifications service</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites-2"><a class="anchor" href="#prerequisites-2"></a>Prerequisites</h3>
+<h3 id="binding-a-mobile-client-with-the-push-notifications-service"><a class="anchor" href="#binding-a-mobile-client-with-the-push-notifications-service"></a>Binding a Mobile Client with the Push Notifications service</h3>
+<div class="sect3">
+<h4 id="prerequisites-3"><a class="anchor" href="#prerequisites-3"></a>Prerequisites</h4>
 <div class="sidebarblock primary">
 <div class="title">Android</div><div class="content">
 <div class="ulist checklist">
@@ -645,25 +792,24 @@ The certificate needs to be encoded in base64 before copying it into the field l
 <p>After clicking Bind your variant will be created in UPS and you should see a new binding for your mobile client.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps-3"><a class="anchor" href="#next-steps-3"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-4"><a class="anchor" href="#next-steps-4"></a>Next Steps</h4>
 <div class="paragraph">
 <p><a href="push/configuring-dev-env-push.html" class="page">Configuring your Development Environment for the  Service</a></p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="coding-a-push-notifications-app"><a class="anchor" href="#coding-a-push-notifications-app"></a>Coding a Push Notifications App</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="coding-a-push-notifications-app"><a class="anchor" href="#coding-a-push-notifications-app"></a>Coding a Push Notifications App</h3>
 
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="configuring-your-development-environment-for-the-push-notifications-service"><a class="anchor" href="#configuring-your-development-environment-for-the-push-notifications-service"></a>Configuring your Development Environment for the Push Notifications Service</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="prerequisites-3"><a class="anchor" href="#prerequisites-3"></a>Prerequisites</h3>
+<h3 id="prerequisites-4"><a class="anchor" href="#prerequisites-4"></a>Prerequisites</h3>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -750,7 +896,7 @@ The certificate needs to be encoded in base64 before copying it into the field l
 </div>
 </div>
 <div class="sect2">
-<h3 id="next-steps-4"><a class="anchor" href="#next-steps-4"></a>Next Steps</h3>
+<h3 id="next-steps-5"><a class="anchor" href="#next-steps-5"></a>Next Steps</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -758,14 +904,13 @@ The certificate needs to be encoded in base64 before copying it into the field l
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="setting-up-push-notifications-service-sdk"><a class="anchor" href="#setting-up-push-notifications-service-sdk"></a>Setting up Push Notifications service SDK</h3>
+<div class="sect3">
+<h4 id="setting-up-push-notifications-service-sdk"><a class="anchor" href="#setting-up-push-notifications-service-sdk"></a>Setting up Push Notifications service SDK</h4>
 <div class="paragraph">
 <p>This guide will help you to set up the Push Notifications service SDK in your App.</p>
 </div>
-<div class="sect3">
-<h4 id="prerequisites-4"><a class="anchor" href="#prerequisites-4"></a>Prerequisites</h4>
+<div class="sect4">
+<h5 id="prerequisites-5"><a class="anchor" href="#prerequisites-5"></a>Prerequisites</h5>
 <div class="sidebarblock primary">
 <div class="title">Android</div><div class="content">
 <div class="paragraph">
@@ -781,8 +926,8 @@ The certificate needs to be encoded in base64 before copying it into the field l
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="importing-the-libraries"><a class="anchor" href="#importing-the-libraries"></a>Importing the libraries</h4>
+<div class="sect4">
+<h5 id="importing-the-libraries"><a class="anchor" href="#importing-the-libraries"></a>Importing the libraries</h5>
 <div class="sidebarblock primary">
 <div class="title">Android</div><div class="content">
 <div class="olist arabic">
@@ -891,8 +1036,8 @@ end</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="device-registration"><a class="anchor" href="#device-registration"></a>Device registration</h4>
+<div class="sect4">
+<h5 id="device-registration"><a class="anchor" href="#device-registration"></a>Device registration</h5>
 <div class="paragraph">
 <p>To make use of the Push Notifications service devices need to be registered by calling an endpoint of the server.
 The SDKs will handle this for you and the following steps will give you everything you need to start working with push notifications.</p>
@@ -1007,82 +1152,18 @@ pushObject.on('registration').subscribe(data =&gt; {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps-5"><a class="anchor" href="#next-steps-5"></a>Next Steps</h3>
+<div class="sect3">
+<h4 id="next-steps-6"><a class="anchor" href="#next-steps-6"></a>Next Steps</h4>
 <div class="paragraph">
 <p><a href="push/proc_sending-a-push-notification.html" class="page">Sending a Push Notification</a></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="proc_sending-a-push-notification_proc_sending-a-push-notification"><a class="anchor" href="#proc_sending-a-push-notification_proc_sending-a-push-notification"></a>Sending a Push Notification</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Unified Push Admin UI allows you to send push notifications to devices.</p>
-</div>
-<h3 id="prerequisites-5" class="discrete">Prerequisites</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Access to the Unified Push Admin UI.</p>
-</li>
-<li>
-<p><a href="push/binding.html" class="page">Binding</a> created.</p>
-</li>
-</ul>
-</div>
-<h3 id="procedure" class="discrete">Procedure</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Open the Unified Push Admin UI in a browser.</p>
-</li>
-<li>
-<p>Select the target application from the home page and click <strong>Send Notification To This App</strong>.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/send1.png" alt="Send a Push">
-</div>
-</div>
-</li>
-<li>
-<p>When the <em>Send Push</em> dialog displays, enter text in the <strong>Message</strong> form.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/send2.png" alt="Enter the payload">
-</div>
-</div>
-</li>
-<li>
-<p>Click <strong>Send Push Notification</strong> to send the message to the target application.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/PushMessage.png" alt="You got a notification!">
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The 3rd party Push Network is responsible for delivering the Push Notification to the target application.
-</td>
-</tr>
-</table>
-</div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="unified-push-admin-ui"><a class="anchor" href="#unified-push-admin-ui"></a>Unified Push Admin UI</h2>
+<h2 id="push-ui"><a class="anchor" href="#push-ui"></a>Accessing Push Notifications using the Unified Push Admin UI</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="con_accessing-push-using-the-ui_con_accessing-push-using-the-ui"><a class="anchor" href="#con_accessing-push-using-the-ui_con_accessing-push-using-the-ui"></a>Accessing Push Notifications using the Unified Push Admin UI</h3>
 <div class="paragraph">
 <p>The Unified Push Admin UI allows you to send Push Notifications.</p>
 </div>
@@ -1114,7 +1195,7 @@ On first login you need to provide the OpenShift OAuth service permissions to re
 </tr>
 </table>
 </div>
-<h4 id="additional-resources" class="discrete">Additional resources</h4>
+<h3 id="additional-resources-2" class="discrete">Additional resources</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1123,12 +1204,14 @@ On first login you need to provide the OpenShift OAuth service permissions to re
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="proc_sending-a-push-notification_proc_sending-a-push-notification"><a class="anchor" href="#proc_sending-a-push-notification_proc_sending-a-push-notification"></a>Sending a Push Notification</h3>
+</div>
+<div class="sect1">
+<h2 id="sending"><a class="anchor" href="#sending"></a>Sending a Push Notification</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The Unified Push Admin UI allows you to send push notifications to devices.</p>
 </div>
-<h4 id="prerequisites-6" class="discrete">Prerequisites</h4>
+<h3 id="prerequisites-6" class="discrete">Prerequisites</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1139,7 +1222,7 @@ On first login you need to provide the OpenShift OAuth service permissions to re
 </li>
 </ul>
 </div>
-<h4 id="procedure-2" class="discrete">Procedure</h4>
+<h3 id="procedure-2" class="discrete">Procedure</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1185,9 +1268,8 @@ The 3rd party Push Network is responsible for delivering the Push Notification t
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="handling-push-notifications"><a class="anchor" href="#handling-push-notifications"></a>Handling Push Notifications</h2>
+<h2 id="handling"><a class="anchor" href="#handling"></a>Handling Push Notifications</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Follow the next steps to handle incoming push notifications in your foregrounded application.</p>
@@ -1249,241 +1331,12 @@ push notifications that arrive when the application is in the background will al
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="proc_preparing-ups-for-use-with-ios_preparing-ups-for-use-with-ios"><a class="anchor" href="#proc_preparing-ups-for-use-with-ios_preparing-ups-for-use-with-ios"></a>Enable Push Notifications for iOS App</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following guide helps you to enable Push Notifications for your iOS application.</p>
-</div>
-<h3 id="prerequisites-7" class="discrete">Prerequisites</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>An Apple developer account</p>
-</li>
-<li>
-<p>A Mac</p>
-</li>
-</ul>
-</div>
-<h3 id="procedure-3" class="discrete">Procedure</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Follow the <a href="https://help.apple.com/xcode/mac/current/#/devdfd3d04a1">official guide</a> to enable push notifications for your Xcode project.</p>
-</li>
-<li>
-<p>Follow  the <a href="https://help.apple.com/developer-account/#/dev82a71386a">official guide</a> to generate an APNs client TLS certificate and export the client TLS identity from your Mac.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Make sure to protect the p12 file with a password.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The exported p12 file with the password will be used later when binding your Mobile Client to the Push Notifications.
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-<h3 id="next-steps-6" class="discrete">Next Steps</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="push/binding.html" class="page">Bind your Mobile Client to the Push Notifications</a>.</p>
-</li>
-</ul>
-</div>
-<h3 id="additional-resources-2" class="discrete">Additional Resources</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>For more information, see <a href="push/index.html" class="page">Push Notifications</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="google-setup"><a class="anchor" href="#google-setup"></a>Obtaining Firebase Cloud Messaging Credentials</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Before the Android application is able to receive the notifications, you must set up access to Firebase Cloud Messaging. As with iOS, you are only able to test out your push notifications in a real device. This section shows you how to obtain the credentials necessary to set up Firebase Cloud Messaging for your app, including:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the <strong>Server key</strong></p>
-</li>
-<li>
-<p>the <strong>Sender ID</strong></p>
-</li>
-<li>
-<p>the <code>google-services.json</code> file containing the credentials required to connect your app to Firebase and Google services.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="project-setup-and-app-registration-using-the-firebase-console"><a class="anchor" href="#project-setup-and-app-registration-using-the-firebase-console"></a>Project Setup and App Registration using the Firebase Console</h3>
-<div class="paragraph">
-<p>First, register with the Firebase Cloud Messaging (FCM) platform, formerly known as Google Cloud Messaging (GCM). You need a Google Account to do this. Start by opening the <a href="https://console.firebase.google.com">Firebase Console</a>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>If you haven&#8217;t created a project, click <strong>Create New Project</strong>:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/create_new_project.png" alt="Create New Project">
-</div>
-</div>
-</li>
-<li>
-<p>Now give your new project a name:</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/project_name.png" alt="New Project Name">
-</div>
-</div>
-</li>
-<li>
-<p>Once the project has been created you will be taken to the <em>Overview</em> screen. From there click the Settings icon located next to the project name in the sidebar, and in the pop-up menu click <strong>Project Settings</strong>.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/project_settings.png" alt="Project Settings">
-</div>
-</div>
-</li>
-<li>
-<p>On the <em>Project Settings</em> screen, switch to the <em>Cloud Messaging</em> tab, where you can find the <strong>Server key</strong> and <strong>Sender ID</strong> (known in GCM as <strong>Project Number</strong>). There is also a <em>Legacy server key</em> but it should not be used for new projects.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/retrieve_credentials.png" alt="Retrieve Credentials">
-</div>
-</div>
-</li>
-<li>
-<p>As the final step of the setup procedure, you need to download the <code>google-services.json</code> file. To do this, first navigate to the <em>Project Overview</em> screen. If this is the first app in your project, click on <code>Add Firebase to my Android app</code> at the top of the page, otherwise click on <strong>Add another App</strong>. In the popup select <em>Add Firebase to your Android app</em>.</p>
-</li>
-<li>
-<p>In the pop-up window enter the Package name of your app and then click the <strong>Register app</strong> button. In the next step you can download the <code>google-services.json</code> file. This file needs to be built into your app binary. Download the JSON file and save it. Click <strong>Next</strong> on the following screens. Skip the step to install the Firebase SDK. Google will send an initial push notification for verification but you can skip this step too if you don&#8217;t have a running app yet.</p>
-<div class="imageblock">
-<div class="content">
-<img src="_images/download_json.png" alt="Download google-services.json">
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-To re-download the <code>google-services.json</code> file, navigate to the <em>Project Settings</em> screen, then switch to the <em>General</em> tab, choose the desired app under <code>Your Apps</code> and click the <code>google-services.json</code> download button.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>At this point Firebase is ready to deliver your messages and you can continue setting up the UnifiedPush server.</p>
-</div>
-</div>
-</div>
-</div>
 </article>
   </main>
 </div>
 <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <h5>Getting Started</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://staging.aerogear.org/getting-started/overview/">Overview</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/installation-and-configuration/">Installation &amp; Configuration</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/creating-mobile-apps/">Creating Mobile Apps</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/enabling-mobile-services/">Enabling Mobile Services</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-3">
-        <h5>Mobile Services</h5>
-        <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
-         <li><a href="https://staging.aerogear.org/services/push/">Push Notifications</a></li>
-         <li><a href="https://staging.aerogear.org/services/metrics/">Metrics</a></li>
-         <li><a href="https://staging.aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
-         <li><a href="https://staging.aerogear.org/services/identity-management/">Identity Management</a></li>
-         <li><a href="https://staging.aerogear.org/services/device-security/">Device Security</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-3">
-        <h5>Mobile SDKs</h5>
-        <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-         <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-        </ul>
-      </div><!-- col -->
-      
-      <div class="col-sm-3">
-        <h5>COMMUNITY</h5>
-        <ul class="list-unstyled">
-          <li><a target="_blank" href="https://github.com/aerogear/">GitHub - Aerogear</a></li>
-          <li><a target="_blank" href="https://github.com/aerogearcatalog/">GitHub - Aerogear Catalog</a></li>
-          <li><a target="_blank" href="https://issues.jboss.org/browse/AEROGEAR">Jira Repo Issues</a></li>
-          <li><a  href="https://staging.aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
-          <li><a target="_blank" href="https://groups.google.com/forum/#!forum/aerogear">Google Group</a></li>
-          <li><a href="irc://irc.freenode.net/aerogear">IRC</a></li>
-        </ul>
-      </div><!-- col -->
-
-      <div class="col-sm-12 follow">
-        <h5>FOLLOW US</h5>
-        <ul class="list-inline">
-          <li><a target="_blank" href="https://www.twitter.com/aerogears"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-          <li><a target="_blank" href="https://www.youtube.com/channel/UCgDcDoN2b7cEI63fgpxACBA"><i class="fa fa-youtube"></i> YouTube</a></li>
-          <li><a target="_blank" href="/feed.atom"><i class="fa fa-rss-square"></i> Feed</a></li>
-        </ul>
-        
-        <p>AeroGear project is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a></p>
-      </div><!-- col -->
-    
-    </div><!-- row -->
-
-  </div><!-- container -->
-
-</footer><!-- footer -->
-
-<section class="redhat">
-  <div class="container">
-    <p class="text-center">
-      <a href="http://www.redhat.com/">
-        <img src="/_/img/redhatlogo-wite.png" alt="redhatlogo-wite" width="130">
-      </a>
-    </p>       
-  </div><!-- container -->
-</section>
+  <p>This is a preview of the https://docs.aerogear.org website.</p>
+</footer>
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>
