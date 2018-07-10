@@ -67,7 +67,7 @@ Zepto(function($){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setting up AeroGear Mobile Services on OpenShift :: AeroGear Mobile Services</title>
-    <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/installing-mobile-services.html">
+    <link rel="canonical" href="https://docs.aerogear.org/aerogear/latest/installing-mobile-services.html">
     <meta name="generator" content="Antora 1.0.1">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -90,43 +90,43 @@ Zepto(function($){
       <ul class="nav navbar-nav">
         
         <li>
-          <a href="https://staging.aerogear.org">Home</a>
+          <a href="https://aerogear.org">Home</a>
         </li>
 
         <li>
-          <a href="https://staging.aerogear.org/getting-started/overview/">Getting Started</a>
+          <a href="https://aerogear.org/getting-started/">Getting Started</a>
         </li>
 
         <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile Services<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li>
-                <a href="https://staging.aerogear.org/services/mobile-ci-cd/">
-                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/push/">
-                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/metrics/">
-                  <i class="material-icons" aria-hidden="true">insert_chart</i> Metrics
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/runtime-connector/">
-                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/identity-management/">
+                <a href="https://aerogear.org/services/identity-management/">
                   <i class="material-icons" aria-hidden="true">account_circle</i> Identity Management
                 </a>
               </li>
               <li>
-                <a href="https://staging.aerogear.org/services/device-security/">
+                <a href="https://aerogear.org/services/push/">
+                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/runtime-connector/">
+                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/metrics/">
+                  <i class="material-icons" aria-hidden="true">insert_chart</i> Mobile Metrics
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/mobile-ci-cd/">
+                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/device-security/">
                   <i class="material-icons" aria-hidden="true">security</i> Device Security
                 </a>
               </li>
@@ -134,13 +134,7 @@ Zepto(function($){
         </li>
 
         <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile SDKs<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-            <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-          </ul>
+          <a href="https://aerogear.org/sdks">Mobile SDKs</a>
         </li>
 
         <li class="hidden-sm active">
@@ -148,12 +142,12 @@ Zepto(function($){
         </li>
    
         <li>
-          <a href="https://staging.aerogear.org/community">Community</a>
+          <a href="https://aerogear.org/community">Community</a>
         </li>
         
 
         <li>
-          <a href="https://staging.aerogear.org/news">News</a>
+          <a href="https://aerogear.org/news">News</a>
         </li>
         
       </ul>
@@ -186,13 +180,13 @@ Zepto(function($){
     <a class="nav-link" href="getting-started.html#provisioning">Provisioning a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#binding">Binding Client Service</a>
+    <a class="nav-link" href="getting-started.html#binding">Binding Services</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#localdev">Setting Up Development Environment</a>
+    <a class="nav-link" href="getting-started.html#setting-up-your-local-development-environment">Setting Up Development Environment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
+    <a class="nav-link" href="getting-started.html#running">Running a Mobile App</a>
   </li>
 </ul>
   </li>
@@ -210,13 +204,10 @@ Zepto(function($){
     <a class="nav-link" href="mobile-clients.html#services">Viewing Available Services</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#binding">Binding Mobile Services</a>
+    <a class="nav-link" href="mobile-clients.html#building">Building Mobile Apps</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#configuring">Configuring and Running Builds</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#running">Downloading and Installing Apps</a>
+    <a class="nav-link" href="mobile-clients.html#sdk">AeroGear SDK</a>
   </li>
 </ul>
   </li>
@@ -253,6 +244,9 @@ Zepto(function($){
     <a class="nav-link" href="push-notifications.html">Push Notifications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="push-notifications.html#introduction">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="push-notifications.html#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -271,22 +265,10 @@ Zepto(function($){
     <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-connector.html#introduction">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="runtime-connector.html#setup">Setting Up</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#creating">Creating an API Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#connecting">Connecting to an API Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#calling">Calling APIs</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#updating">Updating Runtime Parameters</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#securing">Securing an API Server</a>
   </li>
 </ul>
   </li>
@@ -294,6 +276,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mobile-metrics.html#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="mobile-metrics.html#setup">Setting Up</a>
   </li>
@@ -304,7 +289,7 @@ Zepto(function($){
     <a class="nav-link" href="mobile-metrics.html#setup">Device Trust</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="mobile-metrics.html#setup">Identity Management</a>
+    <a class="nav-link" href="mobile-metrics.html#identity">Identity Management</a>
   </li>
 </ul>
   </li>
@@ -312,6 +297,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mobile-cicd.html#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="mobile-cicd.html#setup">Setting Up</a>
   </li>
@@ -339,6 +327,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="device-security.html">Device Security</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="device-security.html#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="device-security.html#setup">Setting Up</a>
   </li>
@@ -369,7 +360,7 @@ Zepto(function($){
     <a class="nav-link" href="showcase-apps.html#binding">Service Binding</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps.html#json">Downloading the service-config file</a>
+    <a class="nav-link" href="showcase-apps.html#downloading-the-mobile-services-configuration-file">Downloading the Mobile Services Configuration File</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="showcase-apps.html#build">Building and Running the Showcase Apps</a>
@@ -421,7 +412,7 @@ Zepto(function($){
     <li class="crumb"><a href="installing-mobile-services.html">Setting up AeroGear Mobile Services on OpenShift</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/installing-mobile-services.adoc"></a></div>
+  <div class="edit-this-page"><a href="https://github.com/aerogear/mobile-docs/edit/master/modules/ROOT/pages/installing-mobile-services.adoc"></a></div>
 </div>
 <article class="doc">
 <h1>Setting up AeroGear Mobile Services on OpenShift</h1>
@@ -437,7 +428,7 @@ Zepto(function($){
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-AeroGear recommends running OpenShift using the method described here. However there are many ways to run OpenShift, and Mobile Services is compatible with most of these methods. There is a known issue with Minishift that makes it unsuitable for mobile development. This issue is described in <a href="https://github.com/minishift/minishift/issues/1287" class="bare">https://github.com/minishift/minishift/issues/1287</a>.
+AeroGear recommends running OpenShift using the method described in this document. However, there are many ways to run OpenShift, and Mobile Services is compatible with most of these methods. There is a known issue with Minishift that makes it unsuitable for mobile development. This issue is described in <a href="https://github.com/minishift/minishift/issues/1287" class="bare">https://github.com/minishift/minishift/issues/1287</a>.
 </td>
 </tr>
 </table>
@@ -454,6 +445,12 @@ AeroGear recommends running OpenShift using the method described here. However t
 </li>
 <li>
 <p>A system capable of running OpenShift as described in <a href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md#prerequisites">Local Cluster Management</a></p>
+</li>
+<li>
+<p>A <a href="https://hub.docker.com/">Docker Hub</a> account</p>
+</li>
+<li>
+<p><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a> (version 2.4 or above)</p>
 </li>
 <li>
 <p><a href="https://www.openshift.org/download.html">OpenShift client tools</a> version 3.9 or later</p>
@@ -481,76 +478,16 @@ Ensure that you can run <a href="https://github.com/openshift/origin/blob/master
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Docker must be version 17.09.1 in order to be compatible with the latest release of OpenShift and AeroGear Mobile Services. This version may be different from the version listed on the oc cluster up documentation. You must ensure you are running with this version of docker and that oc cluster works without errors before moving on. Depending on your OS this is downloaded from different places:
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-<div class="sidebarblock primary">
-<div class="title">MacOS</div><div class="content">
 <div class="paragraph">
-<p>You can download Docker CE for MacOS version 17.09.1 <a href="https://download.docker.com/mac/stable/19543/Docker.dmg">here</a>.</p>
+<p>For Linux (Fedora), add an extra port to the <code>dockerc</code> zone:</p>
 </div>
-</div>
-</div>
-<div class="sidebarblock secondary">
-<div class="title">Linux</div><div class="content">
-<div class="paragraph">
-<p>You can download Docker CE version 17.09.1 for rpm based distros from <a href="https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.09.1.ce-1.el7.centos.x86_64.rpm">here</a>. Otherwise have a look <a href="https://docs.docker.com/install">here</a>.</p>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A <a href="https://hub.docker.com/">Docker Hub</a> account</p>
-</li>
-<li>
-<p><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a> (tested with version 2.4, but should work with version 2.3 or later)</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="firewall-requirements"><a class="anchor" href="#firewall-requirements"></a>Firewall Requirements (Required)</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Configure the Docker registry <em>and</em> ports required as part
-of the cluster setup:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Linux: Follow steps 2 <em>and</em> 3
-<a href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md#linux">here</a></p>
-</li>
-<li>
-<p>Mac: Follow steps 2 <em>and</em> 3
-<a href="https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md#macos-with-docker-for-mac">here</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>For Linux (Fedora) we also need to add an extra port to the <code>dockerc</code>
-zone:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">firewall-cmd --permanent --zone dockerc --add-port 443/tcp
-firewall-cmd --reload</code></pre>
-</div>
-</div>
-</li>
-</ol>
+<pre>firewall-cmd --permanent --zone dockerc --add-port 443/tcp
+firewall-cmd --reload</pre>
 </div>
 </div>
 </div>
@@ -563,72 +500,58 @@ firewall-cmd --reload</code></pre>
 <li>
 <p>Clone the Mobile-core installer:</p>
 <div class="paragraph">
-<p>We configure the local development installation of AeroGear Mobile Services using ansible scripts in our <a href="https://github.com/aerogear/mobile-core">mobile-core</a> repo. Clone this repo to your local machine and check out the 1.0.0-alpha tag using:</p>
+<p>The installer configures the local development installation of AeroGear Mobile Services using ansible scripts in our <a href="https://github.com/aerogear/mobile-core">mobile-core</a> repo.</p>
+</div>
+<div class="paragraph">
+<p>Clone this repo to your local machine and check out the 1.0.0 tag using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone git@github.com:aerogear/mobile-core.git
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/aerogear/mobile-core.git
 cd mobile-core
-git checkout 1.0.0-alpha</code></pre>
+git checkout 1.0.0</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Perform the installation:</p>
-<div class="paragraph">
-<p>In the cloned repository, run the installer with the following command:</p>
-</div>
+<p>In the same directory, run the installer:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./installer/install.sh</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This validates that Ansible, Docker and the OpenShift Client Tools
-are installed and are the right version.</p>
+<p>The installer checks that valid versions of Ansible, Docker and the OpenShift Client Tools
+are installed.</p>
 </div>
-<div class="paragraph">
-<p>Once verified it prompts you for your Docker Hub login credentials, which
-must be valid for the installation to continue.</p>
-</div>
-<div class="paragraph">
-<p>The next set of values are optional and can be left with the default values. However, if you wish to have your local cluster accessible from a mobile device, you must set the <strong>Cluster IP</strong> value shown here to match that of your local machine that you are performing the installation on. <strong>Note:</strong> Your mobile device must be on the same network as your local machine.</p>
-</div>
+</li>
+<li>
+<p>Enter your Docker Hub login credentials when prompted. The installer checks these credentials are valid before continuing.</p>
+</li>
+<li>
+<p>Accept the default values for the next set of prompts, unless you have specific requirements and understand the implications of changing the values.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">DockerHub Tag (Defaults to 1.0.0-alpha):
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">DockerHub Tag (Defaults to latest):
 DockerHub Organisation (Defaults to aerogearcatalog):
-Cluster IP (Defaults to 192.168.37.1):
+Cluster IP (Defaults to < Network IP Address >)
 Wildcard DNS Host (Defaults to nip.io):</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The first two values here are used to configure the service-catalog in the
-resulting cluster to look at other docker registries or tags to fetch the
-APBs from, but unless you are already familiar with editing these values,
-the defaults are the safest option.</p>
+<p>The first two values configure the location of the APBs used for the service-catalog in the cluster you are creating.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>Wildcard DNS Host</strong> option alters the wildcard DNS host you wish
-to use.</p>
-</div>
-</li>
-<li>
-<p>Check the Cluster IP:</p>
-<div class="paragraph">
-<p>To allow communication between your mobile device and the cluster, the
-cluster IP must be the same as your local machines IP address.</p>
+<p>The <strong>Cluster IP</strong> value defaults to the IP address of your primary network interface. If you want to connect to your OpenShift instance from a mobile device, ensure that your device is on the same network.</p>
 </div>
 <div class="paragraph">
-<p>For example, if your workstation has the IP address: "192.168.0.2" and your mobile device
-has the IP <code>192.168.0.3</code>, set the cluster IP to: <code>192.168.0.2</code> so
-that your mobile device is able to access the cluster.</p>
+<p>Typically, you should ensure you are using the IP Address of your Wireless Adapter (if one exists).</p>
 </div>
-</li>
-<li>
-<p>Check the installation logs:</p>
 <div class="paragraph">
-<p>The following installation can take a while the first time it runs as it pulls a number of docker images. Once completed successfully, this will end with output similar to:</p>
+<p>The <strong>Wildcard DNS Host</strong> option alters the wildcard DNS host you want to use.</p>
+</div>
+<div class="paragraph">
+<p>The following installation can take a while the first time it runs, as it pulls a number of Docker images. Once completed successfully, this results in an output similar to the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -649,7 +572,7 @@ localhost                  : ok=44   changed=17   unreachable=0    failed=0</pre
 </div>
 </div>
 <div class="paragraph">
-<p>Which signifies that your installation has completed successfully.</p>
+<p>The log above is displayed after a successful installation.</p>
 </div>
 </li>
 <li>
@@ -657,7 +580,7 @@ localhost                  : ok=44   changed=17   unreachable=0    failed=0</pre
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open a browser and (accepting the self-signed certificate) login:</p>
+<p>Open a browser and login (accepting the self-signed certificate):</p>
 <div class="listingblock">
 <div class="content">
 <pre>https://192.168.37.1:8443/console/</pre>
@@ -682,22 +605,7 @@ password: password</pre>
 </ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="image:catalog-mobile-clients.png" alt="image:catalog mobile clients"></span></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="registering-a-mobile-app.html" class="page">Register a Mobile App</a></p>
-</li>
-<li>
-<p><a href="con_services.html" class="page">Provision a Mobile Service</a></p>
-</li>
-</ul>
+<p><span class="image"><img src="_images/catalog-mobile-clients.png" alt="catalog mobile clients"></span></p>
 </div>
 </div>
 </div>
@@ -707,45 +615,36 @@ password: password</pre>
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
-        <h5>Getting Started</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://staging.aerogear.org/getting-started/overview/">Overview</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/installation-and-configuration/">Installation &amp; Configuration</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/creating-mobile-apps/">Creating Mobile Apps</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/enabling-mobile-services/">Enabling Mobile Services</a></li>
-        </ul>
-      </div><!-- col -->
 
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>Mobile Services</h5>
         <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
-         <li><a href="https://staging.aerogear.org/services/push/">Push Notifications</a></li>
-         <li><a href="https://staging.aerogear.org/services/metrics/">Metrics</a></li>
-         <li><a href="https://staging.aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
-         <li><a href="https://staging.aerogear.org/services/identity-management/">Identity Management</a></li>
-         <li><a href="https://staging.aerogear.org/services/device-security/">Device Security</a></li>
+         <li><a href="https://aerogear.org/services/identity-management/">Identity Management</a></li>
+         <li><a href="https://aerogear.org/services/push/">Push Notifications</a></li>
+         <li><a href="https://aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
+         <li><a href="https://aerogear.org/services/metrics/">Mobile Metrics</a></li>
+         <li><a href="https://aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
+         <li><a href="https://aerogear.org/services/device-security/">Device Security</a></li>
         </ul>
       </div><!-- col -->
 
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>Mobile SDKs</h5>
         <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-         <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
+         <li><a href="https://aerogear.org/sdks/android/">Android</a></li>
+         <li><a href="https://aerogear.org/sdks/cordova/">Cordova</li>
+         <li><a href="https://aerogear.org/sdks/ios/">iOS</a></li>
+         <li><a href="https://aerogear.org/sdks/xamarin/">Xamarin</a></li>
         </ul>
       </div><!-- col -->
       
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>COMMUNITY</h5>
         <ul class="list-unstyled">
           <li><a target="_blank" href="https://github.com/aerogear/">GitHub - Aerogear</a></li>
           <li><a target="_blank" href="https://github.com/aerogearcatalog/">GitHub - Aerogear Catalog</a></li>
           <li><a target="_blank" href="https://issues.jboss.org/browse/AEROGEAR">Jira Repo Issues</a></li>
-          <li><a  href="https://staging.aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
+          <li><a  href="https://aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
           <li><a target="_blank" href="https://groups.google.com/forum/#!forum/aerogear">Google Group</a></li>
           <li><a href="irc://irc.freenode.net/aerogear">IRC</a></li>
         </ul>

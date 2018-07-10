@@ -66,8 +66,8 @@ Zepto(function($){
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled :: AeroGear Mobile Services</title>
-    <link rel="canonical" href="https://www.aerogear.org/aerogear/latest/device-security.html">
+    <title>Device Security :: AeroGear Mobile Services</title>
+    <link rel="canonical" href="https://docs.aerogear.org/aerogear/latest/device-security.html">
     <meta name="generator" content="Antora 1.0.1">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -90,43 +90,43 @@ Zepto(function($){
       <ul class="nav navbar-nav">
         
         <li>
-          <a href="https://staging.aerogear.org">Home</a>
+          <a href="https://aerogear.org">Home</a>
         </li>
 
         <li>
-          <a href="https://staging.aerogear.org/getting-started/overview/">Getting Started</a>
+          <a href="https://aerogear.org/getting-started/">Getting Started</a>
         </li>
 
         <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile Services<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li>
-                <a href="https://staging.aerogear.org/services/mobile-ci-cd/">
-                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/push/">
-                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/metrics/">
-                  <i class="material-icons" aria-hidden="true">insert_chart</i> Metrics
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/runtime-connector/">
-                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
-                </a>
-              </li>
-              <li>
-                <a href="https://staging.aerogear.org/services/identity-management/">
+                <a href="https://aerogear.org/services/identity-management/">
                   <i class="material-icons" aria-hidden="true">account_circle</i> Identity Management
                 </a>
               </li>
               <li>
-                <a href="https://staging.aerogear.org/services/device-security/">
+                <a href="https://aerogear.org/services/push/">
+                  <i class="material-icons" aria-hidden="true">notifications_active</i> Push Notifications
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/runtime-connector/">
+                  <i class="material-icons" aria-hidden="true">cloud</i> Runtime Connector
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/metrics/">
+                  <i class="material-icons" aria-hidden="true">insert_chart</i> Mobile Metrics
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/mobile-ci-cd/">
+                  <i class="material-icons" aria-hidden="true">build</i> Mobile CI/CD
+                </a>
+              </li>
+              <li>
+                <a href="https://aerogear.org/services/device-security/">
                   <i class="material-icons" aria-hidden="true">security</i> Device Security
                 </a>
               </li>
@@ -134,13 +134,7 @@ Zepto(function($){
         </li>
 
         <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile SDKs<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-            <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-            <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
-          </ul>
+          <a href="https://aerogear.org/sdks">Mobile SDKs</a>
         </li>
 
         <li class="hidden-sm active">
@@ -148,12 +142,12 @@ Zepto(function($){
         </li>
    
         <li>
-          <a href="https://staging.aerogear.org/community">Community</a>
+          <a href="https://aerogear.org/community">Community</a>
         </li>
         
 
         <li>
-          <a href="https://staging.aerogear.org/news">News</a>
+          <a href="https://aerogear.org/news">News</a>
         </li>
         
       </ul>
@@ -186,13 +180,13 @@ Zepto(function($){
     <a class="nav-link" href="getting-started.html#provisioning">Provisioning a Service</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#binding">Binding Client Service</a>
+    <a class="nav-link" href="getting-started.html#binding">Binding Services</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#localdev">Setting Up Development Environment</a>
+    <a class="nav-link" href="getting-started.html#setting-up-your-local-development-environment">Setting Up Development Environment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="getting-started.html#running">Running the mobile app</a>
+    <a class="nav-link" href="getting-started.html#running">Running a Mobile App</a>
   </li>
 </ul>
   </li>
@@ -210,13 +204,10 @@ Zepto(function($){
     <a class="nav-link" href="mobile-clients.html#services">Viewing Available Services</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#binding">Binding Mobile Services</a>
+    <a class="nav-link" href="mobile-clients.html#building">Building Mobile Apps</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#configuring">Configuring and Running Builds</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="mobile-clients.html#running">Downloading and Installing Apps</a>
+    <a class="nav-link" href="mobile-clients.html#sdk">AeroGear SDK</a>
   </li>
 </ul>
   </li>
@@ -253,6 +244,9 @@ Zepto(function($){
     <a class="nav-link" href="push-notifications.html">Push Notifications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="push-notifications.html#introduction">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="push-notifications.html#setup">Setting Up</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -271,22 +265,10 @@ Zepto(function($){
     <a class="nav-link" href="runtime-connector.html">Runtime Connector</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-connector.html#introduction">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="runtime-connector.html#setup">Setting Up</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#creating">Creating an API Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#connecting">Connecting to an API Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#calling">Calling APIs</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#updating">Updating Runtime Parameters</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="runtime-connector.html#securing">Securing an API Server</a>
   </li>
 </ul>
   </li>
@@ -294,6 +276,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="mobile-metrics.html">Mobile Metrics</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mobile-metrics.html#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="mobile-metrics.html#setup">Setting Up</a>
   </li>
@@ -304,7 +289,7 @@ Zepto(function($){
     <a class="nav-link" href="mobile-metrics.html#setup">Device Trust</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="mobile-metrics.html#setup">Identity Management</a>
+    <a class="nav-link" href="mobile-metrics.html#identity">Identity Management</a>
   </li>
 </ul>
   </li>
@@ -312,6 +297,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="mobile-cicd.html">Mobile CI/CD</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mobile-cicd.html#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="mobile-cicd.html#setup">Setting Up</a>
   </li>
@@ -339,6 +327,9 @@ Zepto(function($){
     <button class="nav-toggle"></button>
     <a class="nav-link" href="device-security.html">Device Security</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#introduction">Introduction</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="#setup">Setting Up</a>
   </li>
@@ -369,7 +360,7 @@ Zepto(function($){
     <a class="nav-link" href="showcase-apps.html#binding">Service Binding</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="showcase-apps.html#json">Downloading the service-config file</a>
+    <a class="nav-link" href="showcase-apps.html#downloading-the-mobile-services-configuration-file">Downloading the Mobile Services Configuration File</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="showcase-apps.html#build">Building and Running the Showcase Apps</a>
@@ -422,15 +413,15 @@ Zepto(function($){
     <li class="crumb"><a href="device-security.html">Device Security</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/pwright/repos/aerogear/docs/mobile-docs/modules/ROOT/pages/device-security.adoc"></a></div>
+  <div class="edit-this-page"><a href="https://github.com/aerogear/mobile-docs/edit/master/modules/ROOT/pages/device-security.adoc"></a></div>
 </div>
 <article class="doc">
+<h1>Device Security</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#con_introduction-to-device-security_con_introduction-to-device-security">About Device Security</a>
+<li><a href="#introduction">Introduction to the Device Security Service</a>
 <ul class="sectlevel2">
-<li><a href="#con_introduction-to-device-security_additional-resources-con_introduction-to-device-security">Next steps</a></li>
 <li><a href="#setting-up-device-security-service-sdk">Setting up Device Security service SDK</a></li>
 </ul>
 </li>
@@ -445,7 +436,6 @@ Zepto(function($){
 <li><a href="#device-encryption-detection">Device Encryption Detection</a></li>
 <li><a href="#invoking-multiple-self-defence-checks">Invoking Multiple Self Defence Checks</a></li>
 <li><a href="#additional-resources">Additional Resources</a></li>
-<li><a href="#next-steps">Next steps</a></li>
 </ul>
 </li>
 <li><a href="#cert-pinning">Certificate Pinning in Android Devices</a>
@@ -456,7 +446,7 @@ Zepto(function($){
 </ul>
 </div>
 <div class="sect1">
-<h2 id="con_introduction-to-device-security_con_introduction-to-device-security"><a class="anchor" href="#con_introduction-to-device-security_con_introduction-to-device-security"></a>About Device Security</h2>
+<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction to the Device Security Service</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Device Security service allows you to easily configure and manage device security, and trust checks for your mobile application</p>
@@ -483,33 +473,11 @@ Device Security is not currently associated with an OpenShift service, so there 
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="con_introduction-to-device-security_additional-resources-con_introduction-to-device-security"><a class="anchor" href="#con_introduction-to-device-security_additional-resources-con_introduction-to-device-security"></a>Next steps</h3>
-<div class="paragraph">
-<p><a href="security/coding.html" class="page">Configuring your Development Environment for the Security Service</a></p>
-</div>
-<div class="paragraph">
+<div id="con_introduction-to-device-security_additional-resources-con_introduction-to-device-security" class="paragraph">
 <p>include::configuring-dev-env-security.adoc[]</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="setting-up-device-security-service-sdk"><a class="anchor" href="#setting-up-device-security-service-sdk"></a>Setting up Device Security service SDK</h3>
-<div class="paragraph">
-<p>This guide will help you to set up the Device Security service SDK in your App.</p>
-</div>
-<div class="sect3">
-<h4 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h4>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> You have <a href="#">security/configuring-dev-env-security.adoc</a>.</p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i> You have read the <a href="configuring-dev-env.html" class="page">general app setup guide</a>.</p>
-</li>
-</ul>
-</div>
-</div>
 <div class="sect3">
 <h4 id="importing-the-libraries"><a class="anchor" href="#importing-the-libraries"></a>Importing the libraries</h4>
 <div class="sidebarblock primary">
@@ -521,7 +489,7 @@ Device Security is not currently associated with an OpenShift service, so there 
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
-    implementation 'org.aerogear:android-security:1.0.0-alpha'
+    implementation 'org.aerogear:android-security:1.0.0'
 }</code></pre>
 </div>
 </div>
@@ -559,7 +527,7 @@ Any subsequent call to MobileCore#getInstance returns the same instance of <code
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">target '[TARGET NAME]' do
-    pod 'AGSSecurity', '1.0.0-alpha'
+    pod 'AGSSecurity', '1.0.0'
 end</code></pre>
 </div>
 </div>
@@ -655,7 +623,7 @@ Any new instantiation of <code>SecurityService</code> returns the same instance.
 <p>Install the <a href="https://www.nuget.org/packages/AeroGear.Mobile.Security">AeroGear Security</a> package</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security --version 1.0.0-alpha</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security --version 1.0.0</code></pre>
 </div>
 </div>
 </li>
@@ -663,7 +631,7 @@ Any new instantiation of <code>SecurityService</code> returns the same instance.
 <p>Install the specific packages for Android:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security.Platform.Android --version 1.0.0-alpha</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security.Platform.Android --version 1.0.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -671,7 +639,7 @@ Any new instantiation of <code>SecurityService</code> returns the same instance.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security.Platform.iOS --version 1.0.0-alpha</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ dotnet add package AeroGear.Mobile.Security.Platform.iOS --version 1.0.0</code></pre>
 </div>
 </div>
 </li>
@@ -1092,7 +1060,7 @@ SecurityCheckResult result = securityService.Check(SecurityChecks.ALLOW_BACKUP_D
 <div class="sect2">
 <h3 id="device-encryption-detection"><a class="anchor" href="#device-encryption-detection"></a>Device Encryption Detection</h3>
 <div class="paragraph">
-<p>Use this to detect whether the devices filesystem is encrypted.</p>
+<p>Use this to detect whether a devices filesystem is encrypted.</p>
 </div>
 <div class="sidebarblock primary">
 <div class="title">Android</div><div class="content">
@@ -1591,12 +1559,6 @@ let results = security.checkManyAndPublishMetric(checks)</code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="next-steps"><a class="anchor" href="#next-steps"></a>Next steps</h3>
-<div class="paragraph">
-<p><a href="security/proc_pinning-certificates.html" class="page">Certificate Pinning</a></p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1664,45 +1626,36 @@ incapable of making network requests to other services.</p>
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
-        <h5>Getting Started</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://staging.aerogear.org/getting-started/overview/">Overview</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/installation-and-configuration/">Installation &amp; Configuration</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/creating-mobile-apps/">Creating Mobile Apps</a></li>
-          <li><a href="https://staging.aerogear.org/getting-started/enabling-mobile-services/">Enabling Mobile Services</a></li>
-        </ul>
-      </div><!-- col -->
 
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>Mobile Services</h5>
         <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
-         <li><a href="https://staging.aerogear.org/services/push/">Push Notifications</a></li>
-         <li><a href="https://staging.aerogear.org/services/metrics/">Metrics</a></li>
-         <li><a href="https://staging.aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
-         <li><a href="https://staging.aerogear.org/services/identity-management/">Identity Management</a></li>
-         <li><a href="https://staging.aerogear.org/services/device-security/">Device Security</a></li>
+         <li><a href="https://aerogear.org/services/identity-management/">Identity Management</a></li>
+         <li><a href="https://aerogear.org/services/push/">Push Notifications</a></li>
+         <li><a href="https://aerogear.org/services/runtime-connector/">Runtime Connector</a></li>
+         <li><a href="https://aerogear.org/services/metrics/">Mobile Metrics</a></li>
+         <li><a href="https://aerogear.org/services/mobile-ci-cd/">Mobile CI/CD</a></li>
+         <li><a href="https://aerogear.org/services/device-security/">Device Security</a></li>
         </ul>
       </div><!-- col -->
 
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>Mobile SDKs</h5>
         <ul class="list-unstyled">
-         <li><a href="https://staging.aerogear.org/sdks/android/">Android</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/cordova/">Cordova</li>
-         <li><a href="https://staging.aerogear.org/sdks/ios/">iOS</a></li>
-         <li><a href="https://staging.aerogear.org/sdks/xamarin/">Xamarin</a></li>
+         <li><a href="https://aerogear.org/sdks/android/">Android</a></li>
+         <li><a href="https://aerogear.org/sdks/cordova/">Cordova</li>
+         <li><a href="https://aerogear.org/sdks/ios/">iOS</a></li>
+         <li><a href="https://aerogear.org/sdks/xamarin/">Xamarin</a></li>
         </ul>
       </div><!-- col -->
       
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <h5>COMMUNITY</h5>
         <ul class="list-unstyled">
           <li><a target="_blank" href="https://github.com/aerogear/">GitHub - Aerogear</a></li>
           <li><a target="_blank" href="https://github.com/aerogearcatalog/">GitHub - Aerogear Catalog</a></li>
           <li><a target="_blank" href="https://issues.jboss.org/browse/AEROGEAR">Jira Repo Issues</a></li>
-          <li><a  href="https://staging.aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
+          <li><a  href="https://aerogear.org/community/contribution-guide/">Contribution Guide</a></li>
           <li><a target="_blank" href="https://groups.google.com/forum/#!forum/aerogear">Google Group</a></li>
           <li><a href="irc://irc.freenode.net/aerogear">IRC</a></li>
         </ul>
