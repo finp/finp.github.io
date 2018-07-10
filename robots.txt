@@ -2,6 +2,7 @@
 
 User-agent: *
 Disallow:aerogear/latest/android
+Disallow:aerogear/latest/outline
 Disallow:aerogear/latest/apps.html
 Disallow:aerogear/latest/binding-mobile-app-record-to-mobile-services.html
 Disallow:aerogear/latest/configuring-dev-env.html
