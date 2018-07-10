@@ -30,4 +30,5 @@ Disallow:aerogear/latest/testcard.html
 Disallow:aerogear/latest/ups_userguide
 Disallow:aerogear/latest/using-mobile-services-json.html
 Disallow:aerogear/latest/workflow.html
+Disallow:aerogear/latest/workflow
 Disallow:aerogear/latest/xamarin
